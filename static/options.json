@@ -1,0 +1,1557 @@
+{
+    "default_search": [
+        {
+            "counttype": "Occurrences_per_Million_Words",
+            "search_limits": [
+                {
+                    "word": [
+                        "love"
+                    ]
+                }
+            ],
+            "smoothingSpan": 0,
+            "time_measure": "date_year",
+            "words_collation": "Case_Insensitive"
+        }
+    ],
+    "settings": {
+        "dbname": "bookworm_open",
+        "itemName": " text",
+        "sourceName": "htrc_open",
+        "sourceURL": "http://hathitrust.org"
+    },
+    "ui_components": [
+        {
+            "dbfield": "word",
+            "name": "Word(s)",
+            "type": "text"
+        },
+        {
+            "categorical": {
+                "descriptions": {
+                    "1": {
+                        "dbcode": "1",
+                        "name": "not specified",
+                        "shortname": "not specified"
+                    },
+                    "10": {
+                        "dbcode": "10",
+                        "name": "H - Social Sciences",
+                        "shortname": "H - Social Sciences"
+                    },
+                    "11": {
+                        "dbcode": "11",
+                        "name": " Psychology",
+                        "shortname": " Psychology"
+                    },
+                    "12": {
+                        "dbcode": "12",
+                        "name": " and Religion",
+                        "shortname": " and Religion"
+                    },
+                    "13": {
+                        "dbcode": "13",
+                        "name": "B - Philosophy",
+                        "shortname": "B - Philosophy"
+                    },
+                    "14": {
+                        "dbcode": "14",
+                        "name": "S - Agriculture",
+                        "shortname": "S - Agriculture"
+                    },
+                    "15": {
+                        "dbcode": "15",
+                        "name": "T - Technology",
+                        "shortname": "T - Technology"
+                    },
+                    "16": {
+                        "dbcode": "16",
+                        "name": "Q - Science",
+                        "shortname": "Q - Science"
+                    },
+                    "17": {
+                        "dbcode": "17",
+                        "name": "J - Political Science",
+                        "shortname": "J - Political Science"
+                    },
+                    "18": {
+                        "dbcode": "18",
+                        "name": "C - Auxiliary Sciences of History",
+                        "shortname": "C - Auxiliary Sciences of History"
+                    },
+                    "19": {
+                        "dbcode": "19",
+                        "name": "N - Fine Arts",
+                        "shortname": "N - Fine Arts"
+                    },
+                    "2": {
+                        "dbcode": "2",
+                        "name": "P - Language and Literature",
+                        "shortname": "P - Language and Literature"
+                    },
+                    "20": {
+                        "dbcode": "20",
+                        "name": " and General Information Resources",
+                        "shortname": " and General Information Resources"
+                    },
+                    "21": {
+                        "dbcode": "21",
+                        "name": " Library Science",
+                        "shortname": " Library Science"
+                    },
+                    "22": {
+                        "dbcode": "22",
+                        "name": "Z - Bibliography",
+                        "shortname": "Z - Bibliography"
+                    },
+                    "23": {
+                        "dbcode": "23",
+                        "name": "R - Medicine",
+                        "shortname": "R - Medicine"
+                    },
+                    "24": {
+                        "dbcode": "24",
+                        "name": " Anthropology",
+                        "shortname": " Anthropology"
+                    },
+                    "25": {
+                        "dbcode": "25",
+                        "name": " and Recreation",
+                        "shortname": " and Recreation"
+                    },
+                    "26": {
+                        "dbcode": "26",
+                        "name": "G - Geography",
+                        "shortname": "G - Geography"
+                    },
+                    "27": {
+                        "dbcode": "27",
+                        "name": "M - Music",
+                        "shortname": "M - Music"
+                    },
+                    "28": {
+                        "dbcode": "28",
+                        "name": "A - General Works",
+                        "shortname": "A - General Works"
+                    },
+                    "29": {
+                        "dbcode": "29",
+                        "name": "U - Military Science",
+                        "shortname": "U - Military Science"
+                    },
+                    "3": {
+                        "dbcode": "3",
+                        "name": " Dutch",
+                        "shortname": " Dutch"
+                    },
+                    "30": {
+                        "dbcode": "30",
+                        "name": " P - Language and Literature",
+                        "shortname": " P - Language and Literature"
+                    },
+                    "31": {
+                        "dbcode": "31",
+                        "name": " F - History of the United States and British",
+                        "shortname": " F - History of the United States and British"
+                    },
+                    "32": {
+                        "dbcode": "32",
+                        "name": "K - Law",
+                        "shortname": "K - Law"
+                    },
+                    "33": {
+                        "dbcode": "33",
+                        "name": " E - History of America",
+                        "shortname": " E - History of America"
+                    },
+                    "34": {
+                        "dbcode": "34",
+                        "name": "V - Naval Science",
+                        "shortname": "V - Naval Science"
+                    },
+                    "35": {
+                        "dbcode": "35",
+                        "name": " D - General and Old World History",
+                        "shortname": " D - General and Old World History"
+                    },
+                    "36": {
+                        "dbcode": "36",
+                        "name": " H - Social Sciences",
+                        "shortname": " H - Social Sciences"
+                    },
+                    "37": {
+                        "dbcode": "37",
+                        "name": " J - Political Science",
+                        "shortname": " J - Political Science"
+                    },
+                    "38": {
+                        "dbcode": "38",
+                        "name": " Q - Science",
+                        "shortname": " Q - Science"
+                    },
+                    "39": {
+                        "dbcode": "39",
+                        "name": " Z - Bibliography",
+                        "shortname": " Z - Bibliography"
+                    },
+                    "4": {
+                        "dbcode": "4",
+                        "name": " French",
+                        "shortname": " French"
+                    },
+                    "40": {
+                        "dbcode": "40",
+                        "name": " C - Auxiliary Sciences of History",
+                        "shortname": " C - Auxiliary Sciences of History"
+                    },
+                    "41": {
+                        "dbcode": "41",
+                        "name": " B - Philosophy",
+                        "shortname": " B - Philosophy"
+                    },
+                    "42": {
+                        "dbcode": "42",
+                        "name": " T - Technology",
+                        "shortname": " T - Technology"
+                    },
+                    "43": {
+                        "dbcode": "43",
+                        "name": " L - Education",
+                        "shortname": " L - Education"
+                    },
+                    "44": {
+                        "dbcode": "44",
+                        "name": " A - General Works",
+                        "shortname": " A - General Works"
+                    },
+                    "5": {
+                        "dbcode": "5",
+                        "name": " and Latin America",
+                        "shortname": " and Latin America"
+                    },
+                    "6": {
+                        "dbcode": "6",
+                        "name": "E - History of America",
+                        "shortname": "E - History of America"
+                    },
+                    "7": {
+                        "dbcode": "7",
+                        "name": "F - History of the United States and British",
+                        "shortname": "F - History of the United States and British"
+                    },
+                    "8": {
+                        "dbcode": "8",
+                        "name": "D - General and Old World History",
+                        "shortname": "D - General and Old World History"
+                    },
+                    "9": {
+                        "dbcode": "9",
+                        "name": "L - Education",
+                        "shortname": "L - Education"
+                    }
+                },
+                "sort_order": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "15",
+                    "16",
+                    "17",
+                    "18",
+                    "19",
+                    "20",
+                    "21",
+                    "22",
+                    "23",
+                    "24",
+                    "25",
+                    "26",
+                    "27",
+                    "28",
+                    "29",
+                    "30",
+                    "31",
+                    "32",
+                    "33",
+                    "34",
+                    "35",
+                    "36",
+                    "37",
+                    "38",
+                    "39",
+                    "40",
+                    "41",
+                    "42",
+                    "43",
+                    "44"
+                ]
+            },
+            "dbfield": "lc_class__id",
+            "name": "Class",
+            "type": "categorical"
+        },
+        {
+            "categorical": {
+                "descriptions": {
+                    "1": {
+                        "dbcode": "1",
+                        "name": "not specified",
+                        "shortname": "not specified"
+                    },
+                    "2": {
+                        "dbcode": "2",
+                        "name": "J  - General legislative and executive papers",
+                        "shortname": "J  - General legislative and executive papers"
+                    },
+                    "3": {
+                        "dbcode": "3",
+                        "name": "N  - Visual arts",
+                        "shortname": "N  - Visual arts"
+                    },
+                    "4": {
+                        "dbcode": "4",
+                        "name": " J  - General legislative and executive papers",
+                        "shortname": " J  - General legislative and executive papers"
+                    }
+                },
+                "sort_order": [
+                    "1",
+                    "2",
+                    "3",
+                    "4"
+                ]
+            },
+            "dbfield": "lc_subclass__id",
+            "name": "Subclass",
+            "type": "categorical"
+        },
+        {
+            "categorical": {
+                "descriptions": {
+                    "1": {
+                        "dbcode": "1",
+                        "name": "non-fiction",
+                        "shortname": "non-fiction"
+                    },
+                    "2": {
+                        "dbcode": "2",
+                        "name": "unknown",
+                        "shortname": "unknown"
+                    },
+                    "3": {
+                        "dbcode": "3",
+                        "name": "fiction",
+                        "shortname": "fiction"
+                    }
+                },
+                "sort_order": [
+                    "1",
+                    "2",
+                    "3"
+                ]
+            },
+            "dbfield": "fiction_nonfiction__id",
+            "name": "Fiction",
+            "type": "categorical"
+        },
+        {
+            "categorical": {
+                "descriptions": {
+                    "1": {
+                        "dbcode": "1",
+                        "name": "not specified",
+                        "shortname": "not specified"
+                    },
+                    "10": {
+                        "dbcode": "10",
+                        "name": "dictionary",
+                        "shortname": "dictionary"
+                    },
+                    "11": {
+                        "dbcode": "11",
+                        "name": "directory",
+                        "shortname": "directory"
+                    },
+                    "12": {
+                        "dbcode": "12",
+                        "name": "legislation",
+                        "shortname": "legislation"
+                    },
+                    "13": {
+                        "dbcode": "13",
+                        "name": "statistics",
+                        "shortname": "statistics"
+                    },
+                    "14": {
+                        "dbcode": "14",
+                        "name": "festschrift",
+                        "shortname": "festschrift"
+                    },
+                    "15": {
+                        "dbcode": "15",
+                        "name": "handbook",
+                        "shortname": "handbook"
+                    },
+                    "16": {
+                        "dbcode": "16",
+                        "name": "poetry",
+                        "shortname": "poetry"
+                    },
+                    "17": {
+                        "dbcode": "17",
+                        "name": "law report or digest",
+                        "shortname": "law report or digest"
+                    },
+                    "18": {
+                        "dbcode": "18",
+                        "name": " bibliography",
+                        "shortname": " bibliography"
+                    },
+                    "19": {
+                        "dbcode": "19",
+                        "name": " conference publication",
+                        "shortname": " conference publication"
+                    },
+                    "2": {
+                        "dbcode": "2",
+                        "name": "biography",
+                        "shortname": "biography"
+                    },
+                    "20": {
+                        "dbcode": "20",
+                        "name": "novel",
+                        "shortname": "novel"
+                    },
+                    "21": {
+                        "dbcode": "21",
+                        "name": "series",
+                        "shortname": "series"
+                    },
+                    "22": {
+                        "dbcode": "22",
+                        "name": "index",
+                        "shortname": "index"
+                    },
+                    "23": {
+                        "dbcode": "23",
+                        "name": "encyclopedia",
+                        "shortname": "encyclopedia"
+                    },
+                    "24": {
+                        "dbcode": "24",
+                        "name": "drama",
+                        "shortname": "drama"
+                    },
+                    "25": {
+                        "dbcode": "25",
+                        "name": "globe",
+                        "shortname": "globe"
+                    },
+                    "26": {
+                        "dbcode": "26",
+                        "name": "theses",
+                        "shortname": "theses"
+                    },
+                    "27": {
+                        "dbcode": "27",
+                        "name": " festschrift",
+                        "shortname": " festschrift"
+                    },
+                    "28": {
+                        "dbcode": "28",
+                        "name": " directory",
+                        "shortname": " directory"
+                    },
+                    "29": {
+                        "dbcode": "29",
+                        "name": "abstract or summary",
+                        "shortname": "abstract or summary"
+                    },
+                    "3": {
+                        "dbcode": "3",
+                        "name": "bibliography",
+                        "shortname": "bibliography"
+                    },
+                    "4": {
+                        "dbcode": "4",
+                        "name": "government publication",
+                        "shortname": "government publication"
+                    },
+                    "5": {
+                        "dbcode": "5",
+                        "name": "periodical",
+                        "shortname": "periodical"
+                    },
+                    "6": {
+                        "dbcode": "6",
+                        "name": " biography",
+                        "shortname": " biography"
+                    },
+                    "7": {
+                        "dbcode": "7",
+                        "name": " government publication",
+                        "shortname": " government publication"
+                    },
+                    "8": {
+                        "dbcode": "8",
+                        "name": "catalog",
+                        "shortname": "catalog"
+                    },
+                    "9": {
+                        "dbcode": "9",
+                        "name": "conference publication",
+                        "shortname": "conference publication"
+                    }
+                },
+                "sort_order": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "15",
+                    "16",
+                    "17",
+                    "18",
+                    "19",
+                    "20",
+                    "21",
+                    "22",
+                    "23",
+                    "24",
+                    "25",
+                    "26",
+                    "27",
+                    "28",
+                    "29"
+                ]
+            },
+            "dbfield": "genre__id",
+            "name": "Genre",
+            "type": "categorical"
+        },
+        {
+            "categorical": {
+                "descriptions": {
+                    "1": {
+                        "dbcode": "1",
+                        "name": "English",
+                        "shortname": "English"
+                    },
+                    "10": {
+                        "dbcode": "10",
+                        "name": "not specified",
+                        "shortname": "not specified"
+                    },
+                    "11": {
+                        "dbcode": "11",
+                        "name": "Russian",
+                        "shortname": "Russian"
+                    },
+                    "12": {
+                        "dbcode": "12",
+                        "name": "Portuguese",
+                        "shortname": "Portuguese"
+                    },
+                    "13": {
+                        "dbcode": "13",
+                        "name": " Ancient (to 1453)",
+                        "shortname": " Ancient (to 1453)"
+                    },
+                    "14": {
+                        "dbcode": "14",
+                        "name": "Undetermined",
+                        "shortname": "Undetermined"
+                    },
+                    "15": {
+                        "dbcode": "15",
+                        "name": " Modern (1453-)",
+                        "shortname": " Modern (1453-)"
+                    },
+                    "16": {
+                        "dbcode": "16",
+                        "name": "Swedish",
+                        "shortname": "Swedish"
+                    },
+                    "17": {
+                        "dbcode": "17",
+                        "name": "Turkish",
+                        "shortname": "Turkish"
+                    },
+                    "18": {
+                        "dbcode": "18",
+                        "name": " Ottoman",
+                        "shortname": " Ottoman"
+                    },
+                    "19": {
+                        "dbcode": "19",
+                        "name": "Chinese",
+                        "shortname": "Chinese"
+                    },
+                    "2": {
+                        "dbcode": "2",
+                        "name": "German",
+                        "shortname": "German"
+                    },
+                    "20": {
+                        "dbcode": "20",
+                        "name": "Hebrew",
+                        "shortname": "Hebrew"
+                    },
+                    "21": {
+                        "dbcode": "21",
+                        "name": "Danish",
+                        "shortname": "Danish"
+                    },
+                    "22": {
+                        "dbcode": "22",
+                        "name": "Japanese",
+                        "shortname": "Japanese"
+                    },
+                    "23": {
+                        "dbcode": "23",
+                        "name": "Polish",
+                        "shortname": "Polish"
+                    },
+                    "24": {
+                        "dbcode": "24",
+                        "name": "Persian",
+                        "shortname": "Persian"
+                    },
+                    "25": {
+                        "dbcode": "25",
+                        "name": "Norwegian",
+                        "shortname": "Norwegian"
+                    },
+                    "26": {
+                        "dbcode": "26",
+                        "name": "Armenian",
+                        "shortname": "Armenian"
+                    },
+                    "27": {
+                        "dbcode": "27",
+                        "name": "Sanskrit",
+                        "shortname": "Sanskrit"
+                    },
+                    "28": {
+                        "dbcode": "28",
+                        "name": "Czech",
+                        "shortname": "Czech"
+                    },
+                    "3": {
+                        "dbcode": "3",
+                        "name": "French",
+                        "shortname": "French"
+                    },
+                    "4": {
+                        "dbcode": "4",
+                        "name": "Spanish",
+                        "shortname": "Spanish"
+                    },
+                    "5": {
+                        "dbcode": "5",
+                        "name": "Italian",
+                        "shortname": "Italian"
+                    },
+                    "6": {
+                        "dbcode": "6",
+                        "name": "Latin",
+                        "shortname": "Latin"
+                    },
+                    "7": {
+                        "dbcode": "7",
+                        "name": "Arabic",
+                        "shortname": "Arabic"
+                    },
+                    "8": {
+                        "dbcode": "8",
+                        "name": "Dutch",
+                        "shortname": "Dutch"
+                    },
+                    "9": {
+                        "dbcode": "9",
+                        "name": "Greek",
+                        "shortname": "Greek"
+                    }
+                },
+                "sort_order": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "15",
+                    "16",
+                    "17",
+                    "18",
+                    "19",
+                    "20",
+                    "21",
+                    "22",
+                    "23",
+                    "24",
+                    "25",
+                    "26",
+                    "27",
+                    "28"
+                ]
+            },
+            "dbfield": "language__id",
+            "name": "Language",
+            "type": "categorical"
+        },
+        {
+            "categorical": {
+                "descriptions": {
+                    "1": {
+                        "dbcode": "1",
+                        "name": "monographic",
+                        "shortname": "monographic"
+                    },
+                    "2": {
+                        "dbcode": "2",
+                        "name": "serial",
+                        "shortname": "serial"
+                    }
+                },
+                "sort_order": [
+                    "1",
+                    "2"
+                ]
+            },
+            "dbfield": "issuance__id",
+            "name": "Issuance",
+            "type": "categorical"
+        },
+        {
+            "categorical": {
+                "descriptions": {
+                    "1": {
+                        "dbcode": "1",
+                        "name": "not specified",
+                        "shortname": "not specified"
+                    },
+                    "2": {
+                        "dbcode": "2",
+                        "name": "male",
+                        "shortname": "male"
+                    },
+                    "3": {
+                        "dbcode": "3",
+                        "name": "female",
+                        "shortname": "female"
+                    }
+                },
+                "sort_order": [
+                    "1",
+                    "2",
+                    "3"
+                ]
+            },
+            "dbfield": "author_gender__id",
+            "name": "Any Author Gender",
+            "type": "categorical"
+        },
+        {
+            "categorical": {
+                "descriptions": {
+                    "1": {
+                        "dbcode": "1",
+                        "name": "M - Between 150 and 350",
+                        "shortname": "M - Between 150 and 350"
+                    },
+                    "2": {
+                        "dbcode": "2",
+                        "name": "S - Less than 150",
+                        "shortname": "S - Less than 150"
+                    },
+                    "3": {
+                        "dbcode": "3",
+                        "name": "L - Between 350 and 550",
+                        "shortname": "L - Between 350 and 550"
+                    },
+                    "4": {
+                        "dbcode": "4",
+                        "name": "XL - Greater than 550",
+                        "shortname": "XL - Greater than 550"
+                    },
+                    "5": {
+                        "dbcode": "5",
+                        "name": "unknown",
+                        "shortname": "unknown"
+                    }
+                },
+                "sort_order": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ]
+            },
+            "dbfield": "page_count_bin__id",
+            "name": "Page Count",
+            "type": "categorical"
+        },
+        {
+            "categorical": {
+                "descriptions": {
+                    "1": {
+                        "dbcode": "1",
+                        "name": "S - Less than 34806",
+                        "shortname": "S - Less than 34806"
+                    },
+                    "2": {
+                        "dbcode": "2",
+                        "name": "M - Between 34806 and 91778",
+                        "shortname": "M - Between 34806 and 91778"
+                    },
+                    "3": {
+                        "dbcode": "3",
+                        "name": "L - Between 91778 and 185921",
+                        "shortname": "L - Between 91778 and 185921"
+                    },
+                    "4": {
+                        "dbcode": "4",
+                        "name": "XL - Greater than 185921",
+                        "shortname": "XL - Greater than 185921"
+                    },
+                    "5": {
+                        "dbcode": "5",
+                        "name": "unknown",
+                        "shortname": "unknown"
+                    }
+                },
+                "sort_order": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ]
+            },
+            "dbfield": "word_count_bin__id",
+            "name": "Word Count",
+            "type": "categorical"
+        },
+        {
+            "categorical": {
+                "descriptions": {
+                    "1": {
+                        "dbcode": "1",
+                        "name": "United States",
+                        "shortname": "United States"
+                    },
+                    "10": {
+                        "dbcode": "10",
+                        "name": "Italy",
+                        "shortname": "Italy"
+                    },
+                    "11": {
+                        "dbcode": "11",
+                        "name": "Mexico",
+                        "shortname": "Mexico"
+                    },
+                    "12": {
+                        "dbcode": "12",
+                        "name": "Australia",
+                        "shortname": "Australia"
+                    },
+                    "13": {
+                        "dbcode": "13",
+                        "name": "Spain",
+                        "shortname": "Spain"
+                    },
+                    "14": {
+                        "dbcode": "14",
+                        "name": "Netherlands",
+                        "shortname": "Netherlands"
+                    },
+                    "15": {
+                        "dbcode": "15",
+                        "name": "Germany (East)",
+                        "shortname": "Germany (East)"
+                    },
+                    "16": {
+                        "dbcode": "16",
+                        "name": "Austria",
+                        "shortname": "Austria"
+                    },
+                    "17": {
+                        "dbcode": "17",
+                        "name": "South Africa",
+                        "shortname": "South Africa"
+                    },
+                    "18": {
+                        "dbcode": "18",
+                        "name": "Belgium",
+                        "shortname": "Belgium"
+                    },
+                    "19": {
+                        "dbcode": "19",
+                        "name": "Various places",
+                        "shortname": "Various places"
+                    },
+                    "2": {
+                        "dbcode": "2",
+                        "name": "United Kingdom",
+                        "shortname": "United Kingdom"
+                    },
+                    "20": {
+                        "dbcode": "20",
+                        "name": "Venezuela",
+                        "shortname": "Venezuela"
+                    },
+                    "21": {
+                        "dbcode": "21",
+                        "name": "Switzerland",
+                        "shortname": "Switzerland"
+                    },
+                    "22": {
+                        "dbcode": "22",
+                        "name": "Japan",
+                        "shortname": "Japan"
+                    },
+                    "23": {
+                        "dbcode": "23",
+                        "name": "China",
+                        "shortname": "China"
+                    },
+                    "24": {
+                        "dbcode": "24",
+                        "name": "New Zealand",
+                        "shortname": "New Zealand"
+                    },
+                    "25": {
+                        "dbcode": "25",
+                        "name": "Argentina",
+                        "shortname": "Argentina"
+                    },
+                    "26": {
+                        "dbcode": "26",
+                        "name": "Sweden",
+                        "shortname": "Sweden"
+                    },
+                    "27": {
+                        "dbcode": "27",
+                        "name": "Turkey",
+                        "shortname": "Turkey"
+                    },
+                    "28": {
+                        "dbcode": "28",
+                        "name": "Philippines",
+                        "shortname": "Philippines"
+                    },
+                    "29": {
+                        "dbcode": "29",
+                        "name": "Chile",
+                        "shortname": "Chile"
+                    },
+                    "3": {
+                        "dbcode": "3",
+                        "name": "No place, unknown, or undetermined",
+                        "shortname": "No place, unknown, or undetermined"
+                    },
+                    "30": {
+                        "dbcode": "30",
+                        "name": "Denmark",
+                        "shortname": "Denmark"
+                    },
+                    "31": {
+                        "dbcode": "31",
+                        "name": "Portugal",
+                        "shortname": "Portugal"
+                    },
+                    "32": {
+                        "dbcode": "32",
+                        "name": "Brazil",
+                        "shortname": "Brazil"
+                    },
+                    "33": {
+                        "dbcode": "33",
+                        "name": "Poland",
+                        "shortname": "Poland"
+                    },
+                    "34": {
+                        "dbcode": "34",
+                        "name": "Czechoslovakia",
+                        "shortname": "Czechoslovakia"
+                    },
+                    "35": {
+                        "dbcode": "35",
+                        "name": "Soviet Union",
+                        "shortname": "Soviet Union"
+                    },
+                    "36": {
+                        "dbcode": "36",
+                        "name": "Greece",
+                        "shortname": "Greece"
+                    },
+                    "37": {
+                        "dbcode": "37",
+                        "name": "Serbia and Montenegro",
+                        "shortname": "Serbia and Montenegro"
+                    },
+                    "38": {
+                        "dbcode": "38",
+                        "name": "Egypt",
+                        "shortname": "Egypt"
+                    },
+                    "39": {
+                        "dbcode": "39",
+                        "name": "Russia (Federation)",
+                        "shortname": "Russia (Federation)"
+                    },
+                    "4": {
+                        "dbcode": "4",
+                        "name": "Germany",
+                        "shortname": "Germany"
+                    },
+                    "40": {
+                        "dbcode": "40",
+                        "name": "Saint-Martin",
+                        "shortname": "Saint-Martin"
+                    },
+                    "41": {
+                        "dbcode": "41",
+                        "name": "Peru",
+                        "shortname": "Peru"
+                    },
+                    "42": {
+                        "dbcode": "42",
+                        "name": "West Berlin",
+                        "shortname": "West Berlin"
+                    },
+                    "43": {
+                        "dbcode": "43",
+                        "name": "Norway",
+                        "shortname": "Norway"
+                    },
+                    "44": {
+                        "dbcode": "44",
+                        "name": "Bolivia",
+                        "shortname": "Bolivia"
+                    },
+                    "45": {
+                        "dbcode": "45",
+                        "name": "Hungary",
+                        "shortname": "Hungary"
+                    },
+                    "46": {
+                        "dbcode": "46",
+                        "name": "Cuba",
+                        "shortname": "Cuba"
+                    },
+                    "47": {
+                        "dbcode": "47",
+                        "name": "Sri Lanka",
+                        "shortname": "Sri Lanka"
+                    },
+                    "5": {
+                        "dbcode": "5",
+                        "name": "France",
+                        "shortname": "France"
+                    },
+                    "6": {
+                        "dbcode": "6",
+                        "name": "not specified",
+                        "shortname": "not specified"
+                    },
+                    "7": {
+                        "dbcode": "7",
+                        "name": "Canada",
+                        "shortname": "Canada"
+                    },
+                    "8": {
+                        "dbcode": "8",
+                        "name": "Ireland",
+                        "shortname": "Ireland"
+                    },
+                    "9": {
+                        "dbcode": "9",
+                        "name": "India",
+                        "shortname": "India"
+                    }
+                },
+                "sort_order": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "15",
+                    "16",
+                    "17",
+                    "18",
+                    "19",
+                    "20",
+                    "21",
+                    "22",
+                    "23",
+                    "24",
+                    "25",
+                    "26",
+                    "27",
+                    "28",
+                    "29",
+                    "30",
+                    "31",
+                    "32",
+                    "33",
+                    "34",
+                    "35",
+                    "36",
+                    "37",
+                    "38",
+                    "39",
+                    "40",
+                    "41",
+                    "42",
+                    "43",
+                    "44",
+                    "45",
+                    "46",
+                    "47"
+                ]
+            },
+            "dbfield": "publication_country__id",
+            "name": "Publication Country",
+            "type": "categorical"
+        },
+        {
+            "categorical": {
+                "descriptions": {
+                    "1": {
+                        "dbcode": "1",
+                        "name": "England",
+                        "shortname": "England"
+                    },
+                    "10": {
+                        "dbcode": "10",
+                        "name": "Scotland",
+                        "shortname": "Scotland"
+                    },
+                    "11": {
+                        "dbcode": "11",
+                        "name": "Connecticut",
+                        "shortname": "Connecticut"
+                    },
+                    "12": {
+                        "dbcode": "12",
+                        "name": "Maryland",
+                        "shortname": "Maryland"
+                    },
+                    "13": {
+                        "dbcode": "13",
+                        "name": "Missouri",
+                        "shortname": "Missouri"
+                    },
+                    "14": {
+                        "dbcode": "14",
+                        "name": "Michigan",
+                        "shortname": "Michigan"
+                    },
+                    "15": {
+                        "dbcode": "15",
+                        "name": "Indiana",
+                        "shortname": "Indiana"
+                    },
+                    "16": {
+                        "dbcode": "16",
+                        "name": "New Jersey",
+                        "shortname": "New Jersey"
+                    },
+                    "17": {
+                        "dbcode": "17",
+                        "name": "Wisconsin",
+                        "shortname": "Wisconsin"
+                    },
+                    "18": {
+                        "dbcode": "18",
+                        "name": "Virginia",
+                        "shortname": "Virginia"
+                    },
+                    "19": {
+                        "dbcode": "19",
+                        "name": "Ontario",
+                        "shortname": "Ontario"
+                    },
+                    "2": {
+                        "dbcode": "2",
+                        "name": "New York (State)",
+                        "shortname": "New York (State)"
+                    },
+                    "20": {
+                        "dbcode": "20",
+                        "name": "Rhode Island",
+                        "shortname": "Rhode Island"
+                    },
+                    "21": {
+                        "dbcode": "21",
+                        "name": "Maine",
+                        "shortname": "Maine"
+                    },
+                    "22": {
+                        "dbcode": "22",
+                        "name": "Iowa",
+                        "shortname": "Iowa"
+                    },
+                    "23": {
+                        "dbcode": "23",
+                        "name": "Minnesota",
+                        "shortname": "Minnesota"
+                    },
+                    "24": {
+                        "dbcode": "24",
+                        "name": "United States",
+                        "shortname": "United States"
+                    },
+                    "25": {
+                        "dbcode": "25",
+                        "name": "New Hampshire",
+                        "shortname": "New Hampshire"
+                    },
+                    "26": {
+                        "dbcode": "26",
+                        "name": "Tennessee",
+                        "shortname": "Tennessee"
+                    },
+                    "27": {
+                        "dbcode": "27",
+                        "name": "Kansas",
+                        "shortname": "Kansas"
+                    },
+                    "28": {
+                        "dbcode": "28",
+                        "name": "Texas",
+                        "shortname": "Texas"
+                    },
+                    "29": {
+                        "dbcode": "29",
+                        "name": "Georgia",
+                        "shortname": "Georgia"
+                    },
+                    "3": {
+                        "dbcode": "3",
+                        "name": "No place, unknown, or undetermined",
+                        "shortname": "No place, unknown, or undetermined"
+                    },
+                    "30": {
+                        "dbcode": "30",
+                        "name": "North Carolina",
+                        "shortname": "North Carolina"
+                    },
+                    "31": {
+                        "dbcode": "31",
+                        "name": "Kentucky",
+                        "shortname": "Kentucky"
+                    },
+                    "32": {
+                        "dbcode": "32",
+                        "name": "South Carolina",
+                        "shortname": "South Carolina"
+                    },
+                    "33": {
+                        "dbcode": "33",
+                        "name": "Louisiana",
+                        "shortname": "Louisiana"
+                    },
+                    "34": {
+                        "dbcode": "34",
+                        "name": "Washington (State)",
+                        "shortname": "Washington (State)"
+                    },
+                    "35": {
+                        "dbcode": "35",
+                        "name": "Vermont",
+                        "shortname": "Vermont"
+                    },
+                    "36": {
+                        "dbcode": "36",
+                        "name": "Colorado",
+                        "shortname": "Colorado"
+                    },
+                    "37": {
+                        "dbcode": "37",
+                        "name": "Oregon",
+                        "shortname": "Oregon"
+                    },
+                    "38": {
+                        "dbcode": "38",
+                        "name": "Nebraska",
+                        "shortname": "Nebraska"
+                    },
+                    "39": {
+                        "dbcode": "39",
+                        "name": "Alabama",
+                        "shortname": "Alabama"
+                    },
+                    "4": {
+                        "dbcode": "4",
+                        "name": "Massachusetts",
+                        "shortname": "Massachusetts"
+                    },
+                    "40": {
+                        "dbcode": "40",
+                        "name": "Qu\u00e9bec (Province)",
+                        "shortname": "Qu\u00e9bec (Province)"
+                    },
+                    "41": {
+                        "dbcode": "41",
+                        "name": "West Virginia",
+                        "shortname": "West Virginia"
+                    },
+                    "42": {
+                        "dbcode": "42",
+                        "name": "Utah",
+                        "shortname": "Utah"
+                    },
+                    "43": {
+                        "dbcode": "43",
+                        "name": "Florida",
+                        "shortname": "Florida"
+                    },
+                    "44": {
+                        "dbcode": "44",
+                        "name": "Arkansas",
+                        "shortname": "Arkansas"
+                    },
+                    "45": {
+                        "dbcode": "45",
+                        "name": "North Dakota",
+                        "shortname": "North Dakota"
+                    },
+                    "46": {
+                        "dbcode": "46",
+                        "name": "Delaware",
+                        "shortname": "Delaware"
+                    },
+                    "47": {
+                        "dbcode": "47",
+                        "name": "Mississippi",
+                        "shortname": "Mississippi"
+                    },
+                    "48": {
+                        "dbcode": "48",
+                        "name": "Oklahoma",
+                        "shortname": "Oklahoma"
+                    },
+                    "49": {
+                        "dbcode": "49",
+                        "name": "Hawaii",
+                        "shortname": "Hawaii"
+                    },
+                    "5": {
+                        "dbcode": "5",
+                        "name": "Pennsylvania",
+                        "shortname": "Pennsylvania"
+                    },
+                    "50": {
+                        "dbcode": "50",
+                        "name": "Wales",
+                        "shortname": "Wales"
+                    },
+                    "51": {
+                        "dbcode": "51",
+                        "name": "South Dakota",
+                        "shortname": "South Dakota"
+                    },
+                    "52": {
+                        "dbcode": "52",
+                        "name": "New Mexico",
+                        "shortname": "New Mexico"
+                    },
+                    "53": {
+                        "dbcode": "53",
+                        "name": "Montana",
+                        "shortname": "Montana"
+                    },
+                    "54": {
+                        "dbcode": "54",
+                        "name": "United Kingdom",
+                        "shortname": "United Kingdom"
+                    },
+                    "55": {
+                        "dbcode": "55",
+                        "name": "Arizona",
+                        "shortname": "Arizona"
+                    },
+                    "56": {
+                        "dbcode": "56",
+                        "name": "Wyoming",
+                        "shortname": "Wyoming"
+                    },
+                    "57": {
+                        "dbcode": "57",
+                        "name": "Nevada",
+                        "shortname": "Nevada"
+                    },
+                    "58": {
+                        "dbcode": "58",
+                        "name": "Canada",
+                        "shortname": "Canada"
+                    },
+                    "59": {
+                        "dbcode": "59",
+                        "name": "British Columbia",
+                        "shortname": "British Columbia"
+                    },
+                    "6": {
+                        "dbcode": "6",
+                        "name": "Illinois",
+                        "shortname": "Illinois"
+                    },
+                    "60": {
+                        "dbcode": "60",
+                        "name": "Idaho",
+                        "shortname": "Idaho"
+                    },
+                    "61": {
+                        "dbcode": "61",
+                        "name": "Russian S.F.S.R.",
+                        "shortname": "Russian S.F.S.R."
+                    },
+                    "62": {
+                        "dbcode": "62",
+                        "name": "Nova Scotia",
+                        "shortname": "Nova Scotia"
+                    },
+                    "7": {
+                        "dbcode": "7",
+                        "name": "District of Columbia",
+                        "shortname": "District of Columbia"
+                    },
+                    "8": {
+                        "dbcode": "8",
+                        "name": "California",
+                        "shortname": "California"
+                    },
+                    "9": {
+                        "dbcode": "9",
+                        "name": "Ohio",
+                        "shortname": "Ohio"
+                    }
+                },
+                "sort_order": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "15",
+                    "16",
+                    "17",
+                    "18",
+                    "19",
+                    "20",
+                    "21",
+                    "22",
+                    "23",
+                    "24",
+                    "25",
+                    "26",
+                    "27",
+                    "28",
+                    "29",
+                    "30",
+                    "31",
+                    "32",
+                    "33",
+                    "34",
+                    "35",
+                    "36",
+                    "37",
+                    "38",
+                    "39",
+                    "40",
+                    "41",
+                    "42",
+                    "43",
+                    "44",
+                    "45",
+                    "46",
+                    "47",
+                    "48",
+                    "49",
+                    "50",
+                    "51",
+                    "52",
+                    "53",
+                    "54",
+                    "55",
+                    "56",
+                    "57",
+                    "58",
+                    "59",
+                    "60",
+                    "61",
+                    "62"
+                ]
+            },
+            "dbfield": "publication_state__id",
+            "name": "Publication State",
+            "type": "categorical"
+        },
+        {
+            "dbfield": "date_year",
+            "initial": [
+                1700,
+                1990
+            ],
+            "name": "Year",
+            "range": [
+                1016,
+                2010
+            ],
+            "type": "time",
+            "unit": "year"
+        }
+    ]
+}
