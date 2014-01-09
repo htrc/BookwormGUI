@@ -84,14 +84,14 @@ $(document).ready(function(){
   // run first query - either from URL or default query
   var firstQuery = function(){
     //replace website text:
-    document.getElementById('sourceName1').innerHTML=options['settings']['sourceName'];
-    document.getElementById('sourceName2').innerHTML=options['settings']['sourceName'];
+    //document.getElementById('sourceName1').innerHTML=options['settings']['sourceName'];
+    //document.getElementById('sourceName2').innerHTML=options['settings']['sourceName'];
     document.title="bookworm " + options['settings']['sourceName'];
 
     document.getElementById('countName1').innerHTML="% of " + options['settings']['itemName'] + "s";
     document.getElementById('countName2').innerHTML=options['settings']['itemName'] + " count";
-    document.getElementById('itemName').innerHTML=options['settings']['itemName'];
-    document.getElementById('sourceURL').innerHTML='<a href="http://'+options['settings']['sourceURL']+'">'+options['settings']['sourceURL']+'</a>';
+    //document.getElementById('itemName').innerHTML=options['settings']['itemName'];
+    //document.getElementById('sourceURL').innerHTML='<a href="http://'+options['settings']['sourceURL']+'">'+options['settings']['sourceURL']+'</a>';
     
     var params = getHash();
     
