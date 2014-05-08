@@ -16,11 +16,11 @@ help.md:
 	curl -o $@ 'https://docs.google.com/document/d/1xZZmR7d-wxa2iOl80CQ30AIMhHuc0D4D6x_TyRGJyFg/export?format=txt&id=1xZZmR7d-wxa2iOl80CQ30AIMhHuc0D4D6x_TyRGJyFg&token=AC4w5VjYkKUUwHzXedwDyUTL6YVRNVSlQA%3A1399301866774'
 	sed -i.bak -e $(EOM_REGEX) -e $(COM_REGEX1) -e $(COM_REGEX2) $@
 		
-info.md:
+about.md:
 	curl -o $@ 'https://docs.google.com/document/d/1SgkCD6gWyPVj_XggRKUL8KA8izrsrNgRN_sPOPJfaCM/export?format=txt&id=1SgkCD6gWyPVj_XggRKUL8KA8izrsrNgRN_sPOPJfaCM&token=AC4w5Vg-pilQQjKZy2nmVhqv_Ewm1_YILQ%3A1399565049565'
 	sed -i.bak -e $(EOM_REGEX) -e $(COM_REGEX1) -e $(COM_REGEX2) $@
 
-info.html: info.md
+about.html: about.md
 	pandoc -o $@ --template=docs-template.html $<
 	sed -i.bak $(IMG_REGEX) $@
     
