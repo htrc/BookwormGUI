@@ -3,7 +3,7 @@ COM_REGEX1='s/^\[[a-z]\].*$$//'
 COM_REGEX2="s/\[[a-z]\]//g"
 IMG_REGEX='s/<img src=\"images/<img class=\"img\-responsive\" src=\"images/g'
 
-all: clean info.html help.html
+all: clean about.html help.html
 .PHONY: all
 
 gdocs:
@@ -29,7 +29,7 @@ help.html: help.md
 	sed -i.bak $(IMG_REGEX) $@
 
 clean:
-	rm -f info.md
+	rm -f about.md
 	rm -f help.md
 	rm -f *.bak
 
