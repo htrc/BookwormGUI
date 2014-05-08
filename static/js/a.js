@@ -175,7 +175,7 @@ $(document).ready(function(){
     }
     
     var rowHTML =  "<tr class=search-row data-row="+rows+">";
-    rowHTML += "<td class=terms-td><input placeholder='Search terms' class=term></input></td>";
+    rowHTML += "<td class=terms-td><input placeholder='Search terms' class='form-control term'></input></td>";
     rowHTML += "<td><p class=tbl-text>in</sp></td>";
     rowHTML += "<td class=box-td></td>";
     rowHTML += "<td class=add-td></td>";
