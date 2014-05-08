@@ -129,20 +129,45 @@
 
 
 
-<h1 id="hathitrust-research-centers-bookworm-alpha-prototype">HathiTrust Research Center’s Bookworm (Alpha Prototype)</h1>
-<h2 id="rationale">Rationale</h2>
-<p>Bookworm is a tool for culturomic exploration through the observation of chronological trends for words and phrases in large digitized collections of textual documents.</p>
-<p>The world's great research libraries have, over time, carefully assembled a rich body of metadata pertaining to the books in their collections. The HathiTrust Research Center has access to volume-level metadata as well as volume-level content. HTRC-Bookworm, based partially on the prior work of Michel et. al. (2011) and designed to work with the HathiTrust corpus, is being created to provide scholarly researchers with the means of viewing such trends within the HTRC corpus, with faceting on metadata, and to provide synergy between distant (computational) reading and close reading by eventually providing a pathway from the visualization of the aggregate trend to the actual, in-context, individual instances of the word or phrase.</p>
-<h2 id="goals">Goals</h2>
-<p>The tool will be particularly useful to scholars interested in books that are still under copyright - which is the case for most books published after 1923. Although these books will not be available for reading or downloading online, working with individual words and phrases and tracking their occurrences through time will be useful to academic researchers, especially historians, sociologists and literary scholars.</p>
-<p>John Unsworth has noted that a fundamental goal of the humanities is appreciation: &quot;by paying attention to an object of interest, we can explore it, find new dimensions within it, notice things about it that have never been noticed before, and increase its value&quot; (2004). Shifting from traditional close reading to a large-scale view of text presents a profound discomfort for humanities scholars, due to the difficulty in retaining the same sensitivity to what is actually contained in the works being studied. HTRC-Bookworm will function as a link between quantitative analysis (distant reading) and close reading. According to Frederick Gibbs and Daniel Cohen, &quot;any robust digital research methodology must allow the scholar to move easily between distant and close reading, between the bird's eye view and the ground level of the texts themselves&quot; (2011). This is what HTRC-Bookworm intends to accomplish (within the limitations of applicable copyright laws.)</p>
-<h2 id="current-limitations-and-future-improvements">Current limitations and future improvements</h2>
+<h1 id="help-guide-to-hathitrust-research-centers-bookworm-alpha-version">Help Guide to HathiTrust Research Center’s Bookworm (alpha version)</h1>
+<h2 id="the-search-field-and-the-facet-field">The search field and the facet field</h2>
+<div class="figure">
+<img class="img-responsive" src="images/search.png" alt="Search field" /><p class="caption">Search field</p>
+</div>
+<p>Currently, Bookworm supports one-word (unigram) or two-word (bigram) entries as search terms, entered via the search box (search field). Logical connectors such as OR are not supported. Entering the words freedom rider in the search box will search for the contiguous phrase &quot;freedom rider&quot;.</p>
+<p>The facet field displays the options for faceted search. Initially, clicking &quot;All texts&quot; will pop up a menu that displays the possible facet fields. After a selection is made, you can modify it again by clicking on that label. Initially, by clicking &quot;All&quot; or inside this box, another popup displays a scrolling list of values that can be selected for the given facet. Multiple values for a given facet field can be chosen by clicking inside this box. So, for instance, you can search for &quot;Publication Country:US OR Canada&quot;. In addition, you can select values for multiple facet fields. See the figure below, in which three facet fields have been specified.</p>
+<div class="figure">
+<img class="img-responsive" src="images/fields.png" /><p class="caption"></p>
+</div>
+<h2 id="the-info-button">The info button</h2>
+<p>Clicking on the “info” button, shown by an “i” icon at the top right corner of the window, will display information about the project, the HathiTrust Research Center and Rice Cultural Observatory. <!--  --> <img class="img-responsive" src="images/info.png" /></p>
+<h2 id="the-settings-button">The settings button</h2>
+<p>Clicking on the settings button, shown by the &quot;gear&quot; icon which is next to the &quot;i&quot; icon, will pop up a menu for changing display options to specify &quot;Time&quot;, &quot;Quantity&quot;, &quot;Case&quot; and &quot;Smoothing&quot;: <img class="img-responsive" src="images/settings.png" /></p>
 <ul>
-<li><p>The current instantiation (the alpha version) of the HTRC-Bookworm is set up to work with only 250,000, out-of-copyright, volumes of the more than 11,000,000 volumes (consisting of 420 billion pages) that are currently in the HathiTrust corpus.</p></li>
-<li><p>While this alpha version of HTRC-Bookworm works with texts from the HathiTrust corpus, we will ultimately create an application that works with the locally collected metadata associated with any library or archive, and can be supplemented with new metadata as it becomes available. We will also allow the user to upload new corpora and combine them with existing corpora.</p></li>
+<li><p>Time range can be adjusted by dragging the &quot;Time&quot; slider for begin point and end point to the left and right as necessary.</p></li>
+<li>The &quot;Quantity&quot; selection allows you to choose how the numerical values are counted:
+<ul>
+<li>&quot;% of words&quot; shows how frequently the unigram or bigram is used relative to all other tokens in the corpus, for the given year shown. This lets you see how often a word is used relative to the size of the corpus, without having to worry about things like whether there are more books in 1850 than 1900.</li>
+<li>The &quot;% of texts&quot; gives the number of texts that use your search terms at least once as a proportion of the total number of texts published that year. Unlike &quot;% of words,&quot; it will not be skewed by a single book that uses a word hundreds of times; however, it may be impacted by changing sizes.</li>
+<li>When &quot;word count&quot; is selected, the actual count of the searched word is used for creating the plot.</li>
+<li>When &quot;text count&quot; is selected, only those volumes in which the searched word occurs, are used for creating the plot. So, each such text registers as only a single count. <img class="img-responsive" src="images/graph.png" /></li>
+</ul></li>
+<li>Depending on what option you choose, the label of the y-axis of the graph is changed accordingly, and the chart values adjusted.</li>
+<li>For &quot;Case&quot;, selecting the &quot;Insensitive&quot; button will ignore the distinction between lowercase and uppercase characters when counting words while selecting &quot;Sensitive&quot; will maintain the distinction between lowercase and uppercase.</li>
+<li><p>&quot;Smoothing&quot; is a means to create a moving average over the data and to identify overall trends by removing jagged and discontinuous data points. To see the raw data points, set smoothing to 0. To average one point on each side of a data point, set smoothing to 1, which counts previous one, current one, and next one and divides that sum by 3. A smoothing setting of 5 means that 11 values will be averaged, 5 values on each side of the data point. The leftmost and rightmost data points will average fewer values. So with a smoothing of 1, only 2 data points will be averaged. Often trends become more apparent when data is viewed as a moving average. A smoothing of 1 means that the data shown for 1950 averages the raw count for 1950 plus 1 year on either side. Smoothing windows are weighted: the year shown is weighted the most heavily, and the weights decrease in each direction until the smoothing span is reached. A smoothing of 0 means no smoothing at all: just raw data. After setting &quot;smoothing&quot; to 5 years, the same graph looks more continuous and less jagged, as shown below:</p></li>
 </ul>
-<h2 id="references">References</h2>
-<p>Michel, Jean-Baptiste, Shen, Y. K., Aiden, A. P., Veres, A., Gray, M. K., Pickett, J. P., ... &amp; Aiden, E. L. &quot;Quantitative analysis of culture using millions of digitized books.&quot; <em>Science</em> 331.6014 (2011): pp. 176-182. Unsworth, John. “Forms of Attention: Digital Humanities Beyond Representation,&quot; delivered at &quot;<em>The Face of Text: Computer-Assisted Text Analysis in the Humanities,</em>&quot; <em>The Third Conference of the Canadian Symposium on Text Analysis (CaSTA)</em>, McMaster University, November 19-21, 2004. Gibbs, Frederick W., and Daniel J. Cohen. &quot;A Conversation with data: prospecting Victorian words and ideas.&quot; <em>Victorian Studies</em>, Vol. 54, No. 1 (2011): pp. 69-77.</p>
+<div class="figure">
+<img class="img-responsive" src="images/graph2.png" /><p class="caption"></p>
+</div>
+<h2 id="the-download-button">The download button</h2>
+<p>Towards the right of the window, you will see a “Download” icon, which looks like this:</p>
+<!--  -->
+
+
+<div class="figure">
+<img class="img-responsive" src="images/download.png" /><p class="caption"></p>
+</div>
+<p>Clicking on the download button provides a popup menu with four options for downloading an image of the chart: “Download PNG image,” “Download JPEG image,” “Download PDF document,” and “Download SVG vector image”. These are just different formats in which you can save and download the plot that you have generated. A raster image consists of pixels, whereas a vector image is based on a mathematical model of the image. &quot;Choose the “SVG vector image” option if you will need to scale/resize your image. The other options are raster image formats, which are less suitable for scaling, but have the advantage of a smaller file size.</p>
 
 
 </div>
