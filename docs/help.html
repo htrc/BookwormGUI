@@ -6,15 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
   <meta name="generator" content="pandoc" />
-
-
   <title></title>
   <style type="text/css">code{white-space: pre;}</style>
-
-
-
-
-
 
     <!-- Bootstrap -->
     <link href="../static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -40,14 +33,14 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" style="margin-top:-5px" href="http://sandbox.htrc.illinois.edu/bookworm/"><img src="https://htrc2.pti.indiana.edu/HTRC-UI-Portal2/images/hathi.jpg" width="32" height="32" style="padding-right: 5px;">HTRC Bookworm Alpha</a>
+      <a class="navbar-brand" style="margin-top:-5px" href="../"><img src="https://htrc2.pti.indiana.edu/HTRC-UI-Portal2/images/hathi.jpg" width="32" height="32" style="padding-right: 5px;">HTRC Bookworm Alpha</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="http://sandbox.htrc.illinois.edu/bookworm/docs/help.html">Help</a></li>
-        <li><a href="http://sandbox.htrc.illinois.edu/bookworm/docs/about.html">About</a></li>
+        <li><a href="help.html">Help</a></li>
+        <li><a href="about.html">About</a></li>
         <!--<li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
           <ul class="dropdown-menu">
@@ -80,18 +73,15 @@
 <!-- END HEADER-->
 <!-- Main body content goes here -->
 <div class="container" style="padding-top:60px">
-
-
-
 <h1 id="help-guide-to-hathitrust-research-centers-bookworm-alpha">Help Guide to HathiTrust Research Center’s Bookworm (Alpha)</h1>
 <h2 id="the-search-field-and-the-facet-field">The search field and the facet field</h2>
 <div class="figure">
-<img class="img-responsive" src="images/search.png" /><p class="caption"></p>
+<img class="img-responsive" src="images/search.png" />
 </div>
 <p>Currently, Bookworm supports one-word (unigram) or two-word (bigram) entries as search terms, entered via the search box (search field). Logical connectors such as OR are not supported. Entering the words freedom rider in the search box will search for the contiguous phrase &quot;freedom rider&quot;.</p>
 <p>The facet field displays the options for faceted search. Initially, clicking &quot;All texts&quot; will pop up a menu that displays the possible facet fields. After a selection is made, you can modify it again by clicking on that label. Initially, by clicking &quot;All&quot; or inside this box, another popup displays a scrolling list of values that can be selected for the given facet. Multiple values for a given facet field can be chosen by clicking inside this box. So, for instance, you can search for &quot;Publication Country:US OR Canada&quot;. In addition, you can select values for multiple facet fields. See the figure below, in which three facet fields have been specified.</p>
 <div class="figure">
-<img class="img-responsive" src="images/fields.png" /><p class="caption"></p>
+<img class="img-responsive" src="images/fields.png" />
 </div>
 <h2 id="the-info-button">The info button</h2>
 <p>Clicking on the “info” button, shown by an “i” icon at the top right corner of the window, will display information about the project, the HathiTrust Research Center and Rice Cultural Observatory. <!--  --> <img class="img-responsive" src="images/info.png" /></p>
@@ -111,7 +101,7 @@
 <li><p>&quot;Smoothing&quot; is a means to create a moving average over the data and to identify overall trends by removing jagged and discontinuous data points. To see the raw data points, set smoothing to 0. To average one point on each side of a data point, set smoothing to 1, which counts previous one, current one, and next one and divides that sum by 3. A smoothing setting of 5 means that 11 values will be averaged, 5 values on each side of the data point. The leftmost and rightmost data points will average fewer values. So with a smoothing of 1, only 2 data points will be averaged. Often trends become more apparent when data is viewed as a moving average. A smoothing of 1 means that the data shown for 1950 averages the raw count for 1950 plus 1 year on either side. Smoothing windows are weighted: the year shown is weighted the most heavily, and the weights decrease in each direction until the smoothing span is reached. A smoothing of 0 means no smoothing at all: just raw data. After setting &quot;smoothing&quot; to 5 years, the same graph looks more continuous and less jagged, as shown below:</p></li>
 </ul>
 <div class="figure">
-<img class="img-responsive" src="images/graph2.png" /><p class="caption"></p>
+<img class="img-responsive" src="images/graph2.png" />
 </div>
 <h2 id="the-download-button">The download button</h2>
 <p>Towards the right of the window, you will see a “Download” icon, which looks like this:</p>
@@ -119,10 +109,9 @@
 
 
 <div class="figure">
-<img class="img-responsive" src="images/download.png" /><p class="caption"></p>
+<img class="img-responsive" src="images/download.png" />
 </div>
 <p>Clicking on the download button provides a popup menu with four options for downloading an image of the chart: “Download PNG image,” “Download JPEG image,” “Download PDF document,” and “Download SVG vector image”. These are just different formats in which you can save and download the plot that you have generated. A raster image consists of pixels, whereas a vector image is based on a mathematical model of the image. &quot;Choose the “SVG vector image” option if you will need to scale/resize your image. The other options are raster image formats, which are less suitable for scaling, but have the advantage of a smaller file size.</p>
-
 
 </div>
 
