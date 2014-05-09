@@ -92,16 +92,68 @@
     </style>
     <meta charset="UTF-8">
     <meta name="description" content="bookworm: Search for trends in hundreds of thousands of texts">
-    <title>Bookworm</title>
+	<title>htrc bookworm</title>
 </head>
 
 <body>
-  <div class="row-fluid">
-      <div id=header>
-        <div id=header_brand>
+
+<!-- HEADER -->
+<nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" style="margin-top:-5px" href="http://sandbox.htrc.illinois.edu/bookworm/"><img src="https://htrc2.pti.indiana.edu/HTRC-UI-Portal2/images/hathi.jpg" width="32" height="32" style="padding-right: 5px;">HTRC Bookworm Alpha</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="http://sandbox.htrc.illinois.edu/bookworm/docs/help.html">Help</a></li>
+        <li><a href="http://sandbox.htrc.illinois.edu/bookworm/docs/about.html">About</a></li>
+        <!--<li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>-->
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">HTRC Portal</a></li>
+        <!--<li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>-->
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<!-- END HEADER-->
+
+    <div id=header style="padding-top:60px;padding-left:15px;">
+    <div id=header_brand>
           <h1><a href="http://bookworm.culturomics.org" target="_blank">bookworm:</a> <font id=sourceName1></font></h1>
-          <p>
+                                         width="32" height="32" style="padding-right: 5px;"> <a href="https://sandbox.htrc.illinois.edu:8443/HTRC-UI-Portal2/"  style="text-decoration: none;color: #000000;" target="_blank">HathiTrust Research Center: Alpha Prototype </a><a href="http://bookworm.culturomics.org" style="text-decoration: none;color: #000000;" target="_blank">Bookworm</a></h1>
+      <p>
         <span class="subtitle">Search for trends in hundreds of thousands of <text id=itemName></text>s at <span id=sourceURL></span></span>
+	<span class="subtitle">Search for trends in the <a href="http://www.hathitrust.org/datasets">Non-Google-digitized</a> public domain corpus (~ 250K volumes)</span>
           </p>
         </div>
 
@@ -113,7 +165,7 @@
   </div>
   </div>
 
-  <div id=search_queries>
+  <div id=search_queries style="padding-left:15px">
 
     <table class=top>
       <tr class=top>
@@ -218,8 +270,6 @@
 </table></span>
 </div></div>
 
-
-
 <div id=settings style="display: none">
   <table>
     <tr><td><div id=labeltime></div></td><td><div id=timetype></div></td></tr>
@@ -263,14 +313,14 @@
     </tr>
   </table>
 
-
+  
 </div>
 <div id=about style="display: none; width: 250px;">
-    <!--<p>The <span id=sourceName2></span> bookworm is a creation of the Rice Cultural Observatory which enables you to graphically explore lexical trends across a huge digital library.</p>-->
+   <p>This Bookworm is an exploration of the <a href="http://www.hathitrust.org/htrc" target="_blank">HathiTrust Research Center</a>,  a collaborative research center launched jointly by Indiana University and the University of Illinois, along with the <a href="http://www.hathitrust.org" target="_blank">HathiTrust Digital Library</a>. <!--, to help meet the technical challenges of dealing with massive amounts of digital text that researchers face by developing cutting-edge software tools and cyberinfrastructure to enable advanced computational access to the growing digital record of human knowledge.--></p><p>Bookworm was created by Benjamin Schmidt at the Department of History, Northeastern, Matt Nicklay, Martin Camacho, Neva Durand, and Erez Lieberman Aiden at the Rice Cultural Observatory (RICO). Additional info on Bookworm can be found <a href="http://bookworm.culturomics.org" target="_blank">here</a>.</p>
     <p>Bookworm was created by Benjamin Schmidt (Department of History, Northeastern), Matt Nicklay, Neva Cherniavsky Durand, Martin Camacho, and Erez Lieberman Aiden at the <a href="http://www.culturomics.org" target="_blank">Cultural Observatory</a>. It enables you to visually explore lexical trends. Bookworm is hosted through the&nbsp;generous support of the <a href="http://www.opensciencedatacloud.org/" target="_blank">Open Science Data Cloud</a>. If you use it in an academic publication, please include a link to <a href="http://bookworm.culturomics.org/" target="_blank">bookworm.culturomics.org</a>.</p>
     <!-- This help file could be dynamically named, or something?-->
+    <!-- This help file could be dynamically named, or something?--> 
 </div>
-
 
 <div id=permalink style="display:none;">
   <table>
