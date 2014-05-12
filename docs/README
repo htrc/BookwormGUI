@@ -1,0 +1,10 @@
+HTRC Documentation
+-------------------
+
+This folder contains the Bookworm help and info pages. These are created dynamically from Google Docs.
+
+To build an updated html page from the Google Doc, type
+
+    make
+
+It's that easy. The documents are written in Pandoc Markdown. After being downloaded, they are converted to HTML with _docs-template.html_ template. Make any HTML-specific changes there.
