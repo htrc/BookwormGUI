@@ -2,7 +2,7 @@
 (function() {
 
   $(document).ready(function() {
-    var addCommas, addRow, buildQuery, colors, cts, data, doneResizing, firstQuery, fixAddButton, fixColors, fixEditBoxPositions, fixSlugs, fixTime, fixXButton, getDate, getHash, getSmoothing, hexColors, hidePopups, initializeSelectBoxes, lazyround, maxTime, metadata, minTime, n_pages, newEditBox, newSliders, numToReadText, options, page, permQuery, popup_imgs, popups, renderChart, resizing, rows, runQuery, search_button, showBooks, time_array, toggler, validateQuery, year_option;
+    var addCommas, addRow, buildQuery, colors, cts, data, doneResizing, firstQuery, fixAddButton, fixColors, fixEditBoxPositions, fixSlugs, fixTime, fixXButton, getDate, getHash, getSmoothing, hexColors, hidePopups, initializeSelectBoxes, lazyround, maxTime, metadata, minTime, n_pages, newEditBox, newSliders, numToReadText, options, page, permQuery, popup_imgs, popups, renderChart, resizing, rows, runQuery, search_button, showBooks, time_array, toggler, validateQuery, year_option,bookLinks;
     rows = 0;
     data = [];
     cts = [];
@@ -31,11 +31,24 @@
       dataType: "json",
       success: function(response) {
         options = response;
-        firstQuery();
+          firstQuery();
         runQuery();
-      }
+      },
+      error:function(exception){console.log('Exception:'+exception);}
     });
     getHash = function() {
+
+      var translateOldCounttypes = function(term) {
+	  //some back-compatability for old versions of this browser.
+	  var translations = {
+	      "Occurrences_per_Million_Words":"WordsPerMillion",
+	      "Number_of_Words":"WordCount",
+	      "Percentage_of_Texts":"TextPercent",
+	      "Number_of_Books":"TextCount"
+	  }
+	  if (typeof(translations[term])!="undefined") {return translations[term]}
+	  return term
+      }
       var def, link, ps;
       link = $.URLDecode(window.location.href.split("?")[1]);
       if (link) {
@@ -47,10 +60,11 @@
             ps[key] = def[key];
           }
         });
-        return ps;
       } else {
-        return options["default_search"][Math.floor(Math.random() * options["default_search"].length)];
+	ps = options["default_search"][Math.floor(Math.random() * options["default_search"].length)];
       }
+        ps['counttype'] = translateOldCounttypes(ps['counttype'])
+        return ps;
     };
     firstQuery = function() {
       var params, search_limits;
@@ -76,10 +90,10 @@
       });
       initializeSelectBoxes();
       newSliders();
-      $(".btn", "#colltype").filter(function(i, v) {
+      $(".btn", "#collationtype").filter(function(i, v) {
         return $(v).data("val") === params["words_collation"];
       }).addClass("active");
-      $(".btn", "#collationtype").filter(function(i, v) {
+      $(".btn", "#counttype").filter(function(i, v) {
         return $(v).data("val") === params["counttype"];
       }).addClass("active");
       $("#year-slider").slider("values", params["time_limits"]);
@@ -100,9 +114,12 @@
       fixSlugs();
     };
     $("#search_queries").on("click", ".box_plus", function(event) {
-      var row;
-      row = $(this).parents(".search-row").data("row");
+      var row = $(this).parents(".search-row").data("row");
       addRow(true, row);
+      // Since default removequery box color was set to black, change it to red if there is more than 1.
+      if ($('span.removequery i').length > 1) {
+            $('span.removequery i').css('color', '#DF0101');
+        }
     });
     addRow = function(copy, row) {
       var last_cat, last_cats, newCatBox, newRow, new_cat, prevterm, rowHTML, searchRow;
@@ -251,7 +268,7 @@
         $(editBox).css("top", newTop).css("left", newLeft);
       });
     };
-    search_button = "<button class='btn btn-primary search-btn'>Search</button>";
+    search_button = "<button class='btn btn-primary search-btn' rel='tooltip' title='Search the corpus!'>Search</button>";
     fixAddButton = function() {
       $(".add-td").html("");
       $("#search_queries tr.search-row:last td.add-td").html(search_button);
@@ -402,14 +419,28 @@
         $("#time-val").text("" + v[0] + " - " + v[1]);
       }
     };
-    $("#search_queries").on("click", ".box_x", function(event) {
-      var popups, row;
-      row = $(this).parents("tr.search-row").data("row");
-      $("#edit_box_" + row).remove();
-      $(this).parents("tr.search-row").remove();
-      fixAddButton();
-      popups = _(popups).without("#edit_box_" + row);
+    // set all 'removequery' boxes to black by default -- then the logic below (and the logic for onclick of .box_plus) will set the right color.
+    $('span.removequery i').css('color', 'black');
+    // delete a row
+    $('#search_queries').on('click', '.box_x', function(event) {
+        // Don't delete box if only 1
+        var num_el_rows = $('tr.search-row').length;
+        if(num_el_rows > 1){
+            var row = $(this).parents('tr.search-row').data('row');
+            // remove corresponding edit box
+            $('#edit_box_' + row).remove();
+            $(this).parents('tr.search-row').remove();
+            // fix UI elements
+            fixAddButton();
+            popups = _(popups).without('#edit_box_' + row);
+            if ($('tr.search-row').length == 1) {
+                $('span.removequery i').css('color', 'black');
+            } else {
+                $('span.removequery i').css('color', '#DF0101');
+            }
+        }
     });
+    
     getDate = function(intval) {
       var minDate;
       minDate = new Date();
@@ -443,7 +474,7 @@
       runQuery();
     });
     buildQuery = function() {
-      var cat, cats, i, key, limit, limits, query, terms, time_measure;
+      var cat, cats, i, key, limit, limits, query, terms, time_measure,time_limits;
       time_measure = void 0;
       if (time_array.length === 1) {
         time_measure = time_array[0]["dbfield"];
@@ -453,11 +484,9 @@
         }
       }
       query = {
-        time_measure: time_measure,
-        time_limits: $("#year-slider").slider("values"),
-        counttype: $(".active", "#collationtype").data("val"),
-        words_collation: $(".active", "#colltype").data("val"),
-        smoothingSpan: getSmoothing($("#smoothing-slider").slider("value")),
+        groups: [time_measure],
+        counttype: $(".active", "#counttype").data("val"),
+        words_collation: $(".active", "#collationtype").data("val"),
         database: options["settings"]["dbname"]
       };
       limits = [];
@@ -486,8 +515,10 @@
       i = 0;
       while (i < terms.length) {
         limit = {
-          word: [terms[i]]
+          word: [terms[i]]	    
         };
+	time_limits = $("#year-slider").slider("values")
+	limit[time_measure] = {"$gte":time_limits[0],"$lte":time_limits[1]}
         cat = cats[i];
         for (key in cat) {
           if (cat[key].length !== 0) {
@@ -498,6 +529,7 @@
         i++;
       }
       query["search_limits"] = limits;
+      query["method"] = "return_json"	
       return query;
     };
     addCommas = function(str) {
@@ -532,35 +564,40 @@
       }
       query = buildQuery();
       $("#permalink").find("input").val(permQuery());
+      updateTwitterValues(permQuery(),"Check out this #htrc_bookworm ! ");
       $("#chart").html("");
       $("#chart").addClass("loading");
       $.ajax({
         url: "/cgi-bin/dbbindings.py",
         data: {
-          method: "return_query_values",
-          queryTerms: JSON.stringify(query)
+          query: JSON.stringify(query)
         },
         dataType: "html",
         success: function(response) {
-          var res;
-          res = response.split("===RESULT===")[1];
-          data = eval(res);
+	  newSliders()
+	  var slugQuery;
+          data = JSON.parse(response.replace(/.*RESULT===/,""))
+	  slugQuery = JSON.parse(JSON.stringify(query))
+	  slugQuery['groups'] = []
+	  _.forEach(slugQuery['search_limits'],function(limit) {
+	      delete limit['word'];
+	  })
+	  slugQuery['counttype'] = ['TextCount','WordCount']
           $.ajax({
-            context: "#search_queries",
+              context: "#search_queries",
             url: "/cgi-bin/dbbindings.py",
             data: {
-              method: "return_slug_data",
-              queryTerms: JSON.stringify(query)
+              query: JSON.stringify(slugQuery)
             },
             dataType: "html",
             success: function(response) {
-              var actual_string;
-              actual_string = response.split("===RESULT===")[1];
-              cts = eval(actual_string);
+	      cts = JSON.parse(response);
               renderChart();
-            }
+            },
+            error:function(exception){console.log('Exception:'+exception);}
           });
-        }
+        },
+        error:function(exception){console.log('Exception:'+exception);}
       });
     };
     minTime = function() {
@@ -593,23 +630,38 @@
       }
     };
     renderChart = function() {
+	//is this variable initialized somewhere else?
+      query = buildQuery()
       var chart, myt, q, series, xAxisLabel, xtype, yAxisLabel, year_span;
       q = $("a.box_data");
       q = q.slice(0, q.length - 1);
       q = _.map(q, function(el, i) {
         var a, aa, pw, s;
         s = $(el).html();
-        pw = "; " + numToReadText(cts[i][0]) + " " + options["settings"]["itemName"] + "s, " + numToReadText(cts[i][1]) + " words";
+        pw = "; " + numToReadText(cts[i][0]) + " " + 
+	      options["settings"]["itemName"] + "s, " + 
+	      numToReadText(cts[i][1]) + 
+	      " words";
         aa = [];
         if (s === "All " + options["settings"]["itemName"] + "s") {
           aa.push("all " + options["settings"]["itemName"] + "s");
         } else {
-          a = s.split("|");
+          // need to remove custom OR styling as highcharts legend color can't handle it
+          bb = []
+          b = s.split('<em style="font-size:80%;color:#545454"><strong><kbd>OR</kbd></strong></em>');
+          _(b).each(function(ss) {
+            bb.push($.trim(ss));
+          });
+          // recombine with simple OR
+          s2 = bb.join(" _OR_ ");
+          
+          // now to remove custom AND styling for same reason
+          a = s2.split('<em style="font-size:80%"><strong><kbd>AND</kbd></strong></em>');
           _(a).each(function(ss) {
             aa.push($.trim(ss));
           });
         }
-        return "[" + aa.join(", ") + pw + "]";
+        return "[" + aa.join(" _AND_ ") + pw + "]";
       });
       series = [];
       myt = $("#time_measure").val();
@@ -620,18 +672,32 @@
       if (myt === "author_age") {
         xtype = "linear";
       }
-      year_span = _.range($("#year-slider").slider("values", 0), $("#year-slider").slider("values", 1));
+      year_span = _.range($("#year-slider").slider("values", 0), $("#year-slider").slider("values", 1)); // +1
       _(data).each(function(s, i) {
-        var sdata, serie, vals, years;
-        vals = s["values"];
+        var sdata, serie, vals, years,groupName,smoothingSpan;
+	  vals = {}
+	  _.keys(s).forEach(function(key) {
+	      vals[String(parseInt(key))] = s[key]
+	  })
+
+	
+	var smoothingSpan = getSmoothing($("#smoothing-slider").slider("value"))
+	if (smoothingSpan>0) {
+	    vals = smooth(vals,smoothingSpan)
+	}
+	  
         sdata = [];
+	if (typeof(query) != "undefined") {
+	  groupName = query['search_limits'][i]['word'].join(", ")
+	}
+
         years = _.filter(year_span, function(year) {
-          return vals.hasOwnProperty(year);
+          return vals.hasOwnProperty(year)
         });
         _.each(years, function(year) {
           var date, date_parts, date_str_clean, datestr, opts;
           datestr = void 0;
-          if (myt === "date_month" || myt === "month") {
+          if (/(month|day|week)(_.*)?$/.test(myt)) {
             date = getDate(year);
             date_parts = date.toDateString().substring(4).split(" ");
             date_str_clean = date_parts[0] + " " + date_parts[2];
@@ -645,7 +711,7 @@
               y: parseFloat(vals[year]),
               opts: opts
             });
-          } else if (myt === "date_year" || myt === "year") {
+          } else if (/year(_.*)?$/.test(myt)) {
             opts = {
               n: i,
               t: year,
@@ -662,22 +728,24 @@
               t: year,
               str: year
             };
+	    d = new Date()
+	    d.setUTCFullYear(year)
             sdata.push({
-              x: Date.UTC(year, 0, 1),
+              x: d,
               y: parseFloat(vals[year]),
               opts: opts
             });
           }
         });
         serie = {
-          name: s["Name"],
+          name: groupName,
           data: sdata,
           color: hexColors[i + 1]
         };
         series.push(serie);
       });
       xAxisLabel = year_option["name"];
-      yAxisLabel = $(".active", "#collationtype").data("label");
+      yAxisLabel = $(".active", "#counttype").data("label");
       chart = new Highcharts.Chart({
         chart: {
           renderTo: "chart",
@@ -810,16 +878,16 @@
       $(".books-title").html(title);
       query = buildQuery();
       query["search_limits"] = [query["search_limits"][event.point.opts["n"]]];
-      query["search_limits"][0][query["time_measure"]] = [event.point.opts["t"]];
+      query["search_limits"][0][query["groups"]] = [event.point.opts["t"]];
+      query["method"] = "return_books"
       return $.ajax({
         url: "/cgi-bin/dbbindings.py",
         type: "post",
         data: {
-          method: "return_books",
-          queryTerms: JSON.stringify(query)
+          query: JSON.stringify(query)
         },
         success: function(response) {
-          var bookLinks, cat_link, dataArray, i, linkData, n_pages, page, read_link, row, _k, _len3, _ref;
+          var cat_link, dataArray, i, linkData, n_pages, page, read_link, row, _k, _len3, _ref;
           cat_link = void 0;
           dataArray = void 0;
           i = void 0;
@@ -829,8 +897,8 @@
           _k = void 0;
           _len3 = void 0;
           _ref = void 0;
-          response = response.split("===RESULT===")[1];
-          dataArray = eval(eval(response)[0]);
+          dataArray = JSON.parse(response.replace(/.*RESULT===/,""))
+
           bookLinks = [];
           _k = 0;
           _len3 = dataArray.length;
@@ -866,7 +934,8 @@
           $(".pagination a", "#books").filter(function(i, v) {
             return i === page;
           }).parent("li").addClass("active");
-        }
+        },
+        error:function(exception){console.log('Exception:'+exception);}
       });
     };
     page = 0;
@@ -985,11 +1054,12 @@
               }
               _j++;
             }
-            slug = opt["name"] + ": " + sname.join(", ");
-            slugs.push(slug);
+            slug = opt["name"] + ": " + sname.join(' <em style="font-size:80%;color:#545454"><strong><kbd>OR</kbd></strong></em> ');
+            slug_wrapped = "( "+slug+" )";
+            slugs.push(slug_wrapped);
           }
         });
-        meta_text = (slugs.length !== 0 ? slugs.join(" | ") : "All " + options["settings"]["itemName"] + "s");
+        meta_text = (slugs.length !== 0 ? slugs.join(' <em style="font-size:80%"><strong><kbd>AND</kbd></strong></em> ') : "All " + options["settings"]["itemName"] + "s");
         $(v).find(".box_data").html(meta_text);
       });
     };
@@ -1034,3 +1104,33 @@
   });
 
 }).call(this);
+
+var smooth = function(data,span) {
+    //This could be modified to take a kernel or something.
+    var output,years,smoothingGroups;
+    output = {}
+    smoothingGroups = {};
+    years = _.keys(data);
+    _.forEach(years,function(year) {
+	//for each date, append it to the nearby years if they exist in the original.
+	_.forEach(_.range(-span,span+1),function(offset) {
+	    comparator = String(parseInt(year)+offset)
+	    if (typeof(data[comparator]) !="undefined") {
+		if (typeof(smoothingGroups[String(year)])=="undefined") {
+		    //Initialize if missing
+		    smoothingGroups[String(year)] = []
+		}
+		smoothingGroups[String(year)] = smoothingGroups[String(year)].concat(data[comparator])
+	    }
+	})
+    })
+    var sum = function(arr) {
+	return arr.reduce(function(a,b) {return a+b})
+    }
+    _.forEach(years,function(year) {
+	output[year] = sum(smoothingGroups[year])/smoothingGroups[year].length
+    })
+    return output
+}
+
+
