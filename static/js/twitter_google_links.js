@@ -1,10 +1,10 @@
+
 function get_short_google_url(long_url, func)
 {
-	// NOTE - This is the Google Developer Public API Key - can only be called from
-	// specific domain addresses and must be registered as an application
-	var apiKey = 'MY_PUBLIC_API_KEY';
+	var apiKey = 'AIzaSyAeMWvbpyg19qXOvkwNZZK1q0tXrZ6Z90Q';
+	if(gapi.client != "undefined" && gapi.client){
 	gapi.client.setApiKey(apiKey);
-	
+
 	gapi.client.load('urlshortener', 'v1', function() {
 	    var request = gapi.client.urlshortener.url.insert({
 	        'resource': {
@@ -13,12 +13,16 @@ function get_short_google_url(long_url, func)
 	    });
 	    var resp = request.execute(function(resp) {
 	        if (resp.error) {
-	            alert(resp.error.message);
+	            //alert(resp.error.message);
 	        } else {
 	        	func(resp.id);
 	        }
 	    });
 	});
+	}
+	else{
+		func("http://goo.gl/NjxlF4");
+	}
 }
 
 function updateTwitterValues(share_url, title) {
@@ -29,5 +33,6 @@ function updateTwitterValues(share_url, title) {
 		twttr.ready(function(twttr) {
 			twttr.widgets.load();                });
 	});
-
+	
 }
+
