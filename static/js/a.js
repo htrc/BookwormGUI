@@ -558,7 +558,9 @@ var main_function = function() {
       }
       query = buildQuery();
       $("#permalink").find("input").val(permQuery());
-      updateTwitterValues(permQuery(),"Check out this #htrcbookworm ! ");
+//      This line brings down the whole site for me (Ben) on Chromium
+      and OS X.
+//      updateTwitterValues(permQuery(),"Check out this #htrcbookworm ! ");
       $("#chart").html("");
       $("#chart").addClass("loading");
       $.ajax({
