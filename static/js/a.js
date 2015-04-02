@@ -601,7 +601,7 @@ var main_function = function() {
       return getDate($("#year-slider").slider("values", 1)).getTime();
     };
     numToReadText = function(n) {
-      var v;
+      var v, rounding;
       v = void 0;
       if (n < 1000) {
         return n;
@@ -612,15 +612,18 @@ var main_function = function() {
       }
       if (n < 1000000 * 1000) {
         v = n / 1000000.0;
-        return "" + (Math.floor(v)) + "M";
+	rounding = (v < 10) ? 1 : 0;	
+        return "" + (v.toFixed(rounding)) + "M";
       }
       if (n < 1000000 * 1000 * 1000) {
         v = n / (1000000 * 1000.0);
-        return "" + (Math.floor(v)) + "B";
+	rounding = (v < 10) ? 1 : 0;	
+        return "" + (v.toFixed(rounding)) + "B";
       }
       if (n < 1000000 * 1000 * 1000 * 1000) {
         v = n / (1000000 * 1000 * 1000.0);
-        return "" + (v.toFixed(1)) + "tr";
+	rounding = (v > 10) ? 1 : 0;	
+        return "" + (v.toFixed(rounding)) + "tr";
       }
     };
     renderChart = function() {
