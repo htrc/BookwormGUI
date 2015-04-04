@@ -559,8 +559,16 @@ var main_function = function() {
       query = buildQuery();
       $("#permalink").find("input").val(permQuery());
 //      This line brings down the whole site for me (Ben) on Chromium
-      and OS X.
-//      updateTwitterValues(permQuery(),"Check out this #htrcbookworm ! ");
+//      and OS X.
+      
+      try{
+	updateTwitterValues(permQuery(),"Check out this #htrcbookworm! ");
+	}
+	catch(err){
+		  console.log(err.message);
+	}    
+
+
       $("#chart").html("");
       $("#chart").addClass("loading");
       $.ajax({
@@ -902,7 +910,7 @@ var main_function = function() {
           _k = 0;
           _len3 = dataArray.length;
           while (_k < _len3) {
-            bookLinks.push("<li>" + dataArray[_k] + "</li>");
+            bookLinks.push("<li>" + dataArray[_k].replace("/'>", "'>") + "</li>");
             _k++;
           }
           $(".book-list").html("<ul></ul>");
