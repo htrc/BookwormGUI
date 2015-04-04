@@ -558,8 +558,6 @@ var main_function = function() {
       }
       query = buildQuery();
       $("#permalink").find("input").val(permQuery());
-//      This line brings down the whole site for me (Ben) on Chromium
-//      and OS X.
       
       try{
 	updateTwitterValues(permQuery(),"Check out this #htrcbookworm! ");
@@ -567,7 +565,6 @@ var main_function = function() {
 	catch(err){
 		  console.log(err.message);
 	}    
-
 
       $("#chart").html("");
       $("#chart").addClass("loading");
