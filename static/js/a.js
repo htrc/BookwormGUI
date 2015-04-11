@@ -68,12 +68,12 @@ var main_function = function() {
     };
     firstQuery = function() {
       var params, search_limits;
-      document.getElementById("sourceName1").innerHTML = options["settings"]["sourceName"];
+      document.getElementById("bookwormName").innerHTML = options["settings"]["bookwormName"];
       document.title = "bookworm " + options["settings"]["sourceName"];
       document.getElementById("countName1").innerHTML = "% of " + options["settings"]["itemName"] + "s";
       document.getElementById("countName2").innerHTML = options["settings"]["itemName"] + " count";
       document.getElementById("itemName").innerHTML = options["settings"]["itemName"];
-      document.getElementById("sourceURL").innerHTML = "<a href=http://" + options["settings"]["sourceURL"] + ">" + options["settings"]["sourceURL"] + "</a>";
+      document.getElementById("sourceURL").innerHTML = "<a href=http://" + options["settings"]["sourceURL"] + ">" + options["settings"]["sourceName"] + "</a>";
       // Set subtitle with full stats
       showFullStats();
       params = getHash();
