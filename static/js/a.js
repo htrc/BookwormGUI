@@ -74,6 +74,8 @@ var main_function = function() {
       document.getElementById("countName2").innerHTML = options["settings"]["itemName"] + " count";
       document.getElementById("itemName").innerHTML = options["settings"]["itemName"];
       document.getElementById("sourceURL").innerHTML = "<a href=http://" + options["settings"]["sourceURL"] + ">" + options["settings"]["sourceURL"] + "</a>";
+      // Set subtitle with full stats
+      showFullStats();
       params = getHash();
       search_limits = params["search_limits"];
       _.each(search_limits, function(el) {
@@ -467,6 +469,7 @@ var main_function = function() {
     $(document).on("click", "#blah", function(event) {
       runQuery();
     });
+
     buildQuery = function() {
       var cat, cats, i, key, limit, limits, query, terms, time_measure,time_limits;
       time_measure = void 0;
@@ -551,12 +554,41 @@ var main_function = function() {
         return parts[0];
       }
     };
+    showFullStats = function() {
+        time_measure = options.default_search[0]['time_measure'];
+        query = {
+            'counttype': ['TextCount', 'WordCount'],
+            'search_limits':[{}],
+                "groups": [],
+                "database": options.settings.dbname,
+                "method": "return_json",
+                "compare_limits": []
+        }
+        query.search_limits[0][time_measure] = {"$lte" : 10000};
+
+
+      $.ajax({
+        url: "/cgi-bin/dbbindings.py",
+        data: {
+          query: JSON.stringify(query)
+        },
+        dataType: "html",
+        success: function(response) {
+          data = JSON.parse(response.replace(/.*RESULT===/,""))
+          textCount = data[0][0];
+          wordCount = data[0][1];
+          $(".txtCountMsg").text(numToReadText(textCount));
+
+        }
+      });
+    };
     runQuery = function() {
       var query;
       if (!validateQuery()) {
         return false;
       }
       query = buildQuery();
+      
       $("#permalink").find("input").val(permQuery());
       
       try{
@@ -648,7 +680,8 @@ var main_function = function() {
 	      " words";
         aa = [];
         if (s === "All " + options["settings"]["itemName"] + "s") {
-          aa.push("all " + options["settings"]["itemName"] + "s");
+	  time_limits = $("#year-slider").slider("values");
+          aa.push("all " + options["settings"]["itemName"] + "s ("+time_limits[0]+"-"+time_limits[1]+")");
         } else {
           // need to remove custom OR styling as highcharts legend color can't handle it
           bb = []
