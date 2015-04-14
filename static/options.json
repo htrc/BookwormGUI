@@ -17,8 +17,8 @@
     "settings": {
         "dbname": "hathipd", 
         "itemName": " text", 
-        "sourceName": "Hathitrust Digital Library", 
-	"bookwormName": "Hathitrust Bookworm",
+        "sourceName": "HathiTrust Digital Library", 
+	"bookwormName": "HathiTrust Bookworm",
         "sourceURL": "http://hathitrust.org"
     }, 
     "ui_components": [
