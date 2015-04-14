@@ -73,7 +73,7 @@ var main_function = function() {
       document.getElementById("countName1").innerHTML = "% of " + options["settings"]["itemName"] + "s";
       document.getElementById("countName2").innerHTML = options["settings"]["itemName"] + " count";
       document.getElementById("itemName").innerHTML = options["settings"]["itemName"];
-      document.getElementById("sourceURL").innerHTML = "<a href=http://" + options["settings"]["sourceURL"] + ">" + options["settings"]["sourceName"] + "</a>";
+      document.getElementById("sourceURL").innerHTML = "<a href=\"" + options["settings"]["sourceURL"] + "\">" + options["settings"]["sourceName"] + "</a>";
       // Set subtitle with full stats
       showFullStats();
       params = getHash();
