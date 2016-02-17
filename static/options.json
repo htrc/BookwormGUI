@@ -11,7 +11,7 @@
             ], 
             "smoothingSpan": 5, 
             "time_measure": "date_year", 
-            "words_collation": "Case_Sensitive"
+            "words_collation": "Case_Insensitive"
         }
     ], 
     "settings": {
