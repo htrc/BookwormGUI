@@ -15,6 +15,7 @@
         }
     ], 
     "settings": {
+	"host": "http://bookworm.htrc.illinois.edu/cgi-bin/dbbindings.py",
         "dbname": "hathipd", 
         "itemName": " text", 
         "sourceName": "HathiTrust Digital Library", 
