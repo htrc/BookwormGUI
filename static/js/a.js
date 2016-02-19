@@ -73,12 +73,12 @@
     };
     firstQuery = function() {
       var params, search_limits;
-      document.getElementById("sourceName1").innerHTML = options["settings"]["sourceName"];
+      $("#sourceName1").text(options["settings"]["sourceName"]);
       document.title = "bookworm " + options["settings"]["sourceName"];
-      document.getElementById("countName1").innerHTML = "% of " + options["settings"]["itemName"] + "s";
-      document.getElementById("countName2").innerHTML = options["settings"]["itemName"] + " count";
-      document.getElementById("itemName").innerHTML = options["settings"]["itemName"];
-      document.getElementById("sourceURL").innerHTML = "<a href=\"" + options["settings"]["sourceURL"] + "\">" + options["settings"]["sourceURL"] + "</a>";
+      $("#countName1").html("% of " + options["settings"]["itemName"] + "s");
+      $("#countName2").html(options["settings"]["itemName"] + " count");
+      $("#itemName").text(options["settings"]["itemName"]);
+      $("#sourceURL").html("<a href=\"" + options["settings"]["sourceURL"] + "\">" + options["settings"]["sourceURL"] + "</a>");
       params = getHash();
       search_limits = params["search_limits"];
       _.each(search_limits, function(el) {
