@@ -552,6 +552,9 @@
         cat = cats[i];
         for (key in cat) {
           if (cat[key].length !== 0) {
+            console.log(key);
+            console.log(cat[key]);
+            console.log(cat);
             limit[key] = cat[key];
           }
         }
@@ -594,6 +597,7 @@
         return false;
       }
       query = buildQuery();
+      console.log(query);
       $("#permalink").find("input").val(permQuery());
       
       try{
@@ -605,6 +609,8 @@
       $("#bw-search_error, #bw-search_warning").text("").hide();
       $("#chart").html("");
       $("#chart").addClass("loading");
+      console.log(options.settings.host);
+      console.log("Sending query: " + JSON.stringify(query));
       $.ajax({
         url: options.settings.host,
         data: {
@@ -619,9 +625,11 @@
 				msg = "Unknown backend error occurred. Sorry!";
         	}
         	$("#bw-search_error").text(msg).show();
+          console.log(this.url);
         	console.log(err);	
         },
         success: function(response) {
+          console.log(response);
 		  newSliders();
 		  var slugQuery;
 		  termData = response['data'];
@@ -930,6 +938,8 @@
       query["search_limits"] = [query["search_limits"][event.point.opts["n"]]];
       query["search_limits"][0][query["groups"]] = [event.point.opts["t"]];
       query["method"] = "return_books"
+      console.log(options.settings.host);
+      console.log("Sending query: " + JSON.stringify(query));
       return $.ajax({
         url: options.settings.host,
         type: "post",
@@ -947,7 +957,8 @@
           _k = void 0;
           _len3 = void 0;
           _ref = void 0;
-          dataArray = JSON.parse(response.replace(/.*RESULT===/,""))
+          console.log(response)
+          dataArray = response
 
           bookLinks = [];
           _k = 0;
@@ -985,7 +996,7 @@
             return i === page;
           }).parent("li").addClass("active");
         },
-        error:function(exception){console.log('Exception:'+exception);}
+        error:function(exception){console.log('Exception:'+JSON.stringify(exception));}
       });
     };
     page = 1;
