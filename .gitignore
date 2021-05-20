@@ -1,1 +1,2 @@
-static/options.json
+static/options*.json
+*.log
