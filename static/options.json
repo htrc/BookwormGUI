@@ -1,7 +1,7 @@
 {
   "settings": {
     "magnitude": "millions",
-    "dbname": "bookworm_sample",
+    "dbname": "50K_test",
     "itemName": "volume",
     "sourceName": "HathiTrust",
     "host": "http://localhost:10012",
