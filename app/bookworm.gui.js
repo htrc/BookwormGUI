@@ -81,6 +81,9 @@
       document.title = "bookworm " + options["settings"]["sourceName"];
       $(".bw-texttype").text(options.settings.itemName + "s");
       $("#sourceURL").html("<a href=\"" + options["settings"]["sourceURL"] + "\">" + options["settings"]["sourceURL"] + "</a>");
+      if (options.settings.magnitude) {
+          $('.bw-magnitude').text(options.settings.magnitude);
+      }
       params = getHash();
       search_limits = params["search_limits"];
       _.each(search_limits, function(el) {
@@ -191,9 +194,9 @@
 			  $(v2).trigger("liszt:updated");
 			})
       }
-      // Initialize Chosen for nicer select boxes. This is not done at newEditBox, because copied
+      // Initialize Select2 for nicer select boxes. This is not done at newEditBox, because copied
       // rows may have options changed
-      $(".edit-box").last().find("select").trigger("chosen:updated");
+      $(".edit-box").last().find("select").trigger("select2:change");
       
       $("#search_queries").on("click", "#cat_box_" + rows + " a.box_data", function(event) {
         var editId, editOpen, hideEdit, inEdit;
@@ -229,7 +232,11 @@
 
     newEditBox = function(num) {
     	divName = "edit_box_" + num;
-    	divHTML = $("<form class='form-horizontal dropdown-padding'></form>").addClass("edit-box").addClass(divName).data("row", num);
+    	divHTML = $("<form class='form-horizontal dropdown-padding edit-box'></form>")
+    				.addClass(divName)
+    				.data("row", num)
+    				.appendTo("#cat_box_"+num+" .dropdown ul");
+
 		  datatypes = ["categorical"];
 		  opts = _.filter(options["ui_components"], function(v) {
 			return _.includes(datatypes, v["type"]);
@@ -241,7 +248,7 @@
 			  elts = _(opt["categorical"]["sort_order"]).map(function(key) {
 				return opt["categorical"]["descriptions"][key];
 			  });
-			  selectHTML = "<select data-placeholder='All texts' multiple=multiple style='width:350px;'>";
+			  selectHTML = "<select multiple=multiple style='width:350px;'>";
 			  selectHTML += "<% _(elts).each(function(el){ %> <option value='<%= el['dbcode']%>'><%= el['name']%></option><% }); %>";
 			  selectHTML += "</select>";
 			  selectTemplate = _.template(selectHTML);
@@ -252,10 +259,77 @@
     		rowHTML += "<div class=\"datarow edit-box-select col-sm-8\" data-name=\"<%= dbcode %>\" ><%= select %></div></div>";
 			rowTemplate = _.template(rowHTML);
 			row = rowTemplate({ label: opt.name, select: select, dbcode: opt.dbfield });
-			divHTML.append(row);
-			$(divHTML).find("select").chosen({ width: '100%' })
+			$row = $(row).appendTo(divHTML);
+
+			function regexFindQuery(field, substring, results, page) {
+				var query = buildQuery();
+				query['counttype'] = 'TextCount';
+				query['words_collation'] = 'Case_Sensitive';
+				query['groups'] = ['*'+field+'__id', '*'+field];
+				query['search_limits'] = {};
+				if (substring.length > 0) {
+					query['search_limits'][field] = {'$grep': substring};
+				}
+				query['search_limits'][field + '__id'] = {'$gt': (page-1)*results, '$lt': page*results};
+				return query
+			};
+
+			if (opt.autofill == true) {
+				$row.find("select").select2({ 
+				  placeholder: 'All Texts',
+				  width: '100%',
+				  ajax: {
+					url: options.settings.host,
+					dataType: 'json',
+					delay: 600,
+					data: function(params) {
+						field = opt.dbfield.substring(opt.dbfield.length-4, 0)
+						page = params.page || 1;
+						term = params.term || '';
+						if (params._type == 'query:append') {
+							console.log('test');
+						}
+						// the page size refers to the size of the range that is looked at internally
+						// not the number of results returned (e.g. look at author ids 1-500, 501-1000).
+						// We don't want to search a huge range when everything matches, but the
+						// size scales up when there are more chars
+						var max_result_size;
+						if (term.length <= 1) {
+							max_result_size = 50
+						} else if (term.length <= 3){
+							max_result_size = 5*10**term.length;
+						} else {
+							max_result_size = 5*10**4;
+						}
+						query = regexFindQuery(field, term, max_result_size, page);
+						return {
+							query: JSON.stringify(query) 
+						}
+					},
+					processResults: function (data, params) {
+					  	return {
+					  		results: _.map(data.data, function(result, id) {
+											return {
+												id: id,
+												text: _.flatMap(result, function(v,k){return k+" ("+v+" results)"})[0]
+											}
+					  		}),
+					  		pagination: {
+					  			more: true
+					  		}
+						};
+					},
+					  templateSelection: function(data) {
+						return data.name || data.element.innerText;
+					  },
+					cache: true
+				  }
+				})
+				$row.find("select").val('Test').change();
+			} else {
+				$row.find("select").select2({ placeholder: 'All Texts', width: '100%' });
+			}
 		  });
-		  $("#cat_box_"+num+" .dropdown ul").append(divHTML);
     };
 
     $("#search_queries").on("click", ".add-query", function(event) {
@@ -478,6 +552,9 @@
         cat = cats[i];
         for (key in cat) {
           if (cat[key].length !== 0) {
+            console.log(key);
+            console.log(cat[key]);
+            console.log(cat);
             limit[key] = cat[key];
           }
         }
@@ -520,6 +597,7 @@
         return false;
       }
       query = buildQuery();
+      console.log(query);
       $("#permalink").find("input").val(permQuery());
       
       try{
@@ -531,6 +609,8 @@
       $("#bw-search_error, #bw-search_warning").text("").hide();
       $("#chart").html("");
       $("#chart").addClass("loading");
+      console.log(options.settings.host);
+      console.log("Sending query: " + JSON.stringify(query));
       $.ajax({
         url: options.settings.host,
         data: {
@@ -545,9 +625,11 @@
 				msg = "Unknown backend error occurred. Sorry!";
         	}
         	$("#bw-search_error").text(msg).show();
+          console.log(this.url);
         	console.log(err);	
         },
         success: function(response) {
+          console.log(response);
 		  newSliders();
 		  var slugQuery;
 		  termData = response['data'];
@@ -628,13 +710,7 @@
         return "[" + filter_str + "]" + pw;
       });
       series = [];
-      // Pulls from... where is this exactly?
-      // XXX FIX
       myt = time_array[0]["dbfield"];
-      console.log(myt)
-      if (time_array.length === 1) {
-        myt = time_array[0]["dbfield"];
-      }
       xtype = "datetime";
       if (myt === "author_age") {
         xtype = "linear";
@@ -862,6 +938,8 @@
       query["search_limits"] = [query["search_limits"][event.point.opts["n"]]];
       query["search_limits"][0][query["groups"]] = [event.point.opts["t"]];
       query["method"] = "return_books"
+      console.log(options.settings.host);
+      console.log("Sending query: " + JSON.stringify(query));
       return $.ajax({
         url: options.settings.host,
         type: "post",
@@ -879,7 +957,8 @@
           _k = void 0;
           _len3 = void 0;
           _ref = void 0;
-          dataArray = JSON.parse(response.replace(/.*RESULT===/,""))
+          console.log(response)
+          dataArray = response
 
           bookLinks = [];
           _k = 0;
@@ -917,7 +996,7 @@
             return i === page;
           }).parent("li").addClass("active");
         },
-        error:function(exception){console.log('Exception:'+exception);}
+        error:function(exception){console.log('Exception:'+JSON.stringify(exception));}
       });
     };
     page = 1;
@@ -959,7 +1038,7 @@
     permQuery = function() {
       var def, hash, limits, link, query;
       query = buildQuery();
-      def = options["default_search"][0];
+      def = _.sample(options["default_search"]);
       limits = {};
       _(def).each(function(v, key) {
         var eq;
