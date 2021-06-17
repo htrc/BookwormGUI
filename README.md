@@ -1,7 +1,7 @@
 BookwormGUI
 -------------
 
-The line chart visualization for Bookworm.
+The line chart visualization for Bookworm. This is the integrated version of the line chart visualization with Bookworm Playground.
 
 Settings are in `static/options.json`.
 Example configurations are in `static/examples/`.

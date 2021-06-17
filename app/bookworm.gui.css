@@ -177,8 +177,7 @@ span.remove-query {
 }
 
 #chart {
-  height: 80%;
-  min-height:600px;
+  height: 70%;
   width: 100%;
 }
 
@@ -215,6 +214,14 @@ span.bw-checkmark {
 li {
   font-family: 'Open Sans', sans-serif;
 }
+
+.nav-item {
+  font-family: -apple-system, system-apple-system, BlinkMacSystemFont, "Segoe UI"!important;
+}
+
+.navbar > a, .navbar > ul > li > a {
+  color: #fff;
+} 
 
 .loading {
   background: url(images/ajax-loader.gif) no-repeat center center;

@@ -24,8 +24,8 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "^2.2.2",
-    "bootstrap": "^3.3.6",
+    "jquery": "^3.6",
+    "bootstrap": "^3.4",
     "chosen": "^1.5.1",
     "jquery-ui-multiselect-widget": "^1.4.1",
     "highcharts": "^4.2.3",
