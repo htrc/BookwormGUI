@@ -1,0 +1,38 @@
+{
+  "name": "BookwormGUI",
+  "homepage": "https://github.com/Bookworm-project/BookwormGUI",
+  "description": "Time-series chart for Bookworm",
+  "main": "static/js/a.js",
+  "moduleType": [],
+  "keywords": [
+    "visualization",
+    "bookworm"
+  ],
+  "authors": [
+    "Mitt Nicklay",
+    "Martin Camacho",
+    "Peter Organisciak",
+    "Benjamin Schmidt"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.6",
+    "bootstrap": "^3.4",
+    "chosen": "^1.5.1",
+    "jquery-ui-multiselect-widget": "^1.4.1",
+    "highcharts": "^4.2.3",
+    "keymaster": "^1.6.3",
+    "highcharts-export-csv": "*",
+    "lodash": "^4.6.1",
+    "seiyria-bootstrap-slider": "^6.1.6",
+    "select2": "^4.0.3"
+  }
+}
