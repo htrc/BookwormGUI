@@ -30,7 +30,7 @@
         firstQuery();
         runQuery();
       },
-      error:function(exception){console.log((typeof(exception) == 'object' ? 'Exception:'+JSON.stringify(exception) : 'Exception:'+exception);}
+      error:function(exception){console.log((typeof(exception) == 'object' ? 'Exception:'+JSON.stringify(exception) : 'Exception:'+exception));}
     });
 
     getHash = function() {
