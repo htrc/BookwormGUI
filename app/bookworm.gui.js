@@ -14,7 +14,7 @@
     // Set default options. These are extended by the options from options.json, only overwriting when there's a new setting.
     options = {
         settings: {
-            host: "/cgi-bin/dbbindings.py"
+            host: "/cgi-bin"
         }
     };
     colors = ["", "128, 177, 211", "251, 128, 114", "179, 222, 105", "141, 211, 199", "190, 186, 218", "252, 205, 229", "217, 217, 217"];
@@ -30,7 +30,7 @@
         firstQuery();
         runQuery();
       },
-      error:function(exception){console.log((typeof(exception) == 'object' ? 'Exception:'+JSON.stringify(exception) : 'Exception:'+exception));}
+      error:function(exception){console.log('Exception:'+exception);}
     });
 
     getHash = function() {
