@@ -30,7 +30,7 @@
         firstQuery();
         runQuery();
       },
-      error:function(exception){console.log('Exception:'+exception);}
+      error:function(exception){console.log((typeof(exception) == 'object' ? 'Exception:'+JSON.stringify(exception) : 'Exception:'+exception);}
     });
 
     getHash = function() {
@@ -249,7 +249,7 @@
 				return opt["categorical"]["descriptions"][key];
 			  });
 			  selectHTML = "<select multiple=multiple style='width:350px;'>";
-			  selectHTML += "<% _(elts).each(function(el){ %> <option value='<%= el['dbcode']%>'><%= el['name']%></option><% }); %>";
+			  selectHTML += "<% _(elts).each(function(el){ %> <option value='<%= el['dbcode']%>'><%= el['shortname']%></option><% }); %>";
 			  selectHTML += "</select>";
 			  selectTemplate = _.template(selectHTML);
 			  select = selectTemplate({ elts: elts });
