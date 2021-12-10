@@ -996,7 +996,7 @@
             return i === page;
           }).parent("li").addClass("active");
         },
-        error:function(exception){console.log('Exception:'+JSON.stringify(exception));}
+        error:function(exception){console.log('Exception:'+exception);}
       });
     };
     page = 1;

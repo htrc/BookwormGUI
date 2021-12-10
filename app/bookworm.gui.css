@@ -179,6 +179,7 @@ span.remove-query {
 #chart {
   height: 70%;
   width: 100%;
+  min-height: 600px;
 }
 
 /* Only show bw-checkmark when a marent elent is '.active' */
