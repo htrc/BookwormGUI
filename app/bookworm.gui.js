@@ -931,7 +931,7 @@
     });
     showBooks = function(event) {
       var name, query, title;
-      $(".highcharts-tooltip text tspan:last").html("Retrieving " + options["settings"]["itemName"] + "s...");
+      $(".highcharts-tooltip text tspan:last").html("Getting " + options["settings"]["itemName"] + "s");
       name = this.name;
       title = "Top search results for <code>" + name + "</code> in <code>" + event.point.opts.str + "</code>";
       $(".books-title").html(title);
