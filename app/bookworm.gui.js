@@ -669,15 +669,15 @@
       }
       if (n < 1000000) {
         v = n / 1000.0;
-        return "" + (Math.floor(v)) + "K";
+        return "" + (Math.round(v)) + "K";
       }
       if (n < 1000000 * 1000) {
         v = n / 1000000.0;
-        return "" + (Math.floor(v)) + "M";
+        return "" + (Math.round(v)) + "M";
       }
       if (n < 1000000 * 1000 * 1000) {
         v = n / (1000000 * 1000.0);
-        return "" + (Math.floor(v)) + "B";
+        return "" + (Math.round(v)) + "B";
       }
       if (n < 1000000 * 1000 * 1000 * 1000) {
         v = n / (1000000 * 1000 * 1000.0);
