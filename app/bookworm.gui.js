@@ -931,7 +931,7 @@
     });
     showBooks = function(event) {
       var name, query, title;
-      $(".highcharts-tooltip text:last-child").html("Retrieving " + options["settings"]["itemName"] + "s...");
+      $(".highcharts-tooltip text tspan:last").html("Retrieving " + options["settings"]["itemName"] + "s...");
       name = this.name;
       title = "Top search results for <code>" + name + "</code> in <code>" + event.point.opts.str + "</code>";
       $(".books-title").html(title);
@@ -948,7 +948,7 @@
           query: JSON.stringify(query)
         },
         success: function(response) {
-          $(".highcharts-tooltip text:last-child").html("Click for " + options["settings"]["itemName"] + "s");
+          $(".highcharts-tooltip text tspan:last").html("Click for " + options["settings"]["itemName"] + "s");
           var cat_link, dataArray, i, linkData, n_pages, page, read_link, row, _k, _len3, _ref;
           cat_link = void 0;
           dataArray = void 0;
