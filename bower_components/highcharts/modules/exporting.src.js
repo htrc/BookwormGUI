@@ -1,5 +1,5 @@
 /**
- * @license Highcharts JS v4.2.3 (2016-02-08)
+ * @license Highcharts JS v4.2.7 (2016-09-21)
  * Exporting module
  *
  * (c) 2010-2016 Torstein Honsi
@@ -102,9 +102,10 @@ defaultOptions.exporting = {
 	//enabled: true,
 	//filename: 'chart',
 	type: 'image/png',
-	url: 'http://export.highcharts.com/',
+	url: 'https://export.highcharts.com/',
 	//width: undefined,
-	//scale: 2
+	printMaxWidth: 780,
+	scale: 2,
 	buttons: {
 		contextButton: {
 			menuClassName: PREFIX + 'contextmenu',
@@ -205,12 +206,13 @@ extend(Chart.prototype, {
 			.replace(/isShadow="[^"]+"/g, '')
 			.replace(/symbolName="[^"]+"/g, '')
 			.replace(/jQuery[0-9]+="[^"]+"/g, '')
+            .replace(/url\(("|&quot;)(\S+)("|&quot;)\)/g, 'url($2)')
 			.replace(/url\([^#]+#/g, 'url(#')
 			.replace(/<svg /, '<svg xmlns:xlink="http://www.w3.org/1999/xlink" ')
 			.replace(/ (NS[0-9]+\:)?href=/g, ' xlink:href=') // #3567
 			.replace(/\n/, ' ')
 			// Any HTML added to the container after the SVG (#894)
-			.replace(/<\/svg>.*?$/, '</svg>') 
+			.replace(/<\/svg>.*?$/, '</svg>')
 			// Batik doesn't support rgba fills and strokes (#3095)
 			.replace(/(fill|stroke)="rgba\(([ 0-9]+,[ 0-9]+,[ 0-9]+),([ 0-9\.]+)\)"/g, '$1="rgb($2)" $1-opacity="$3"')
 			/* This fails in IE < 8
@@ -262,7 +264,7 @@ extend(Chart.prototype, {
 			html,
 			options = merge(chart.options, additionalOptions), // copy the options and add extra options
 			allowHTML = options.exporting.allowHTML;
-			
+
 
 		// IE compatibility hack for generating SVG content that it doesn't really understand
 		if (!doc.createElementNS) {
@@ -359,7 +361,7 @@ extend(Chart.prototype, {
 				html = '<foreignObject x="0" y="0" width="200" height="200">' +
 					'<body xmlns="http://www.w3.org/1999/xhtml">' +
 					html[1] +
-					'</body>' + 
+					'</body>' +
 					'</foreignObject>';
 				svg = svg.replace('</svg>', html + '</svg>');
 			}
@@ -397,7 +399,7 @@ extend(Chart.prototype, {
 	 * @param {Object} chartOptions Additional chart options for the SVG representation of the chart
 	 */
 	exportChart: function (options, chartOptions) {
-		
+
 		var svg = this.getSVGForExport(options, chartOptions);
 
 		// merge the options
@@ -408,7 +410,7 @@ extend(Chart.prototype, {
 			filename: options.filename || 'chart',
 			type: options.type,
 			width: options.width || 0, // IE8 fails to post undefined correctly, so use 0
-			scale: options.scale || 2,
+			scale: options.scale,
 			svg: svg
 		}, options.formAttributes);
 
@@ -424,7 +426,10 @@ extend(Chart.prototype, {
 			origDisplay = [],
 			origParent = container.parentNode,
 			body = doc.body,
-			childNodes = body.childNodes;
+			childNodes = body.childNodes,
+			printMaxWidth = chart.options.exporting.printMaxWidth,
+			resetParams,
+			handleMaxWidth;
 
 		if (chart.isPrinting) { // block the button while in printing mode
 			return;
@@ -434,6 +439,13 @@ extend(Chart.prototype, {
 		chart.pointer.reset(null, 0);
 
 		fireEvent(chart, 'beforePrint');
+
+		// Handle printMaxWidth
+		handleMaxWidth = printMaxWidth && chart.chartWidth > printMaxWidth;
+		if (handleMaxWidth) {
+			resetParams = [chart.options.chart.width, undefined, false];
+			chart.setSize(printMaxWidth, undefined, false);
+		}
 
 		// hide all body content
 		each(childNodes, function (node, i) {
@@ -464,6 +476,11 @@ extend(Chart.prototype, {
 			});
 
 			chart.isPrinting = false;
+
+			// Reset printMaxWidth
+			if (handleMaxWidth) {
+				chart.setSize.apply(chart, resetParams);
+			}
 
 			fireEvent(chart, 'afterPrint');
 

@@ -1,5 +1,5 @@
 /**
- * @license Highcharts JS v4.2.3 (2016-02-08)
+ * @license Highcharts JS v4.2.7 (2016-09-21)
  *
  * (c) 2011-2016 Torstein Honsi
  *
@@ -28,6 +28,7 @@
         each = Highcharts.each,
         extend = Highcharts.extend,
         extendClass = Highcharts.extendClass,
+        isNumber = Highcharts.isNumber,
         merge = Highcharts.merge,
         pick = Highcharts.pick,
         seriesTypes = Highcharts.seriesTypes,
@@ -41,7 +42,6 @@
      * The ColorAxis object for inclusion in gradient legends
      */
     var ColorAxis = Highcharts.ColorAxis = function () {
-        this.isColorAxis = true;
         this.init.apply(this, arguments);
     };
     extend(ColorAxis.prototype, Axis.prototype);
@@ -67,11 +67,14 @@
             },
             minColor: '#EFEFFF',
             maxColor: '#003875',
-            tickLength: 5
+            tickLength: 5,
+            showInLegend: true
         },
         init: function (chart, userOptions) {
             var horiz = chart.options.legend.layout !== 'vertical',
                 options;
+
+            this.coll = 'colorAxis';
 
             // Build the options
             options = merge(this.defaultColorAxisOptions, {
@@ -80,8 +83,7 @@
             }, userOptions, {
                 opposite: !horiz,
                 showEmpty: false,
-                title: null,
-                isColor: true
+                title: null
             });
 
             Axis.prototype.init.call(this, chart, options);
@@ -98,6 +100,9 @@
             // Override original axis properties
             this.horiz = horiz;
             this.zoomEnabled = false;
+        
+            // Add default values    
+            this.defaultLegendLength = 200;
         },
 
         /*
@@ -182,12 +187,12 @@
             Axis.prototype.setOptions.call(this, userOptions);
 
             this.options.crosshair = this.options.marker;
-            this.coll = 'colorAxis';
         },
 
         setAxisSize: function () {
             var symbol = this.legendSymbol,
                 chart = this.chart,
+                legendOptions = chart.options.legend || {},
                 x,
                 y,
                 width,
@@ -203,6 +208,9 @@
 
                 this.len = this.horiz ? width : height;
                 this.pos = this.horiz ? x : y;
+            } else {
+                // Fake length for disabled legend to avoid tick issues and such (#5205)
+                this.len = (this.horiz ? legendOptions.symbolWidth : legendOptions.symbolHeight) || this.defaultLegendLength;
             }
         },
 
@@ -317,8 +325,8 @@
             var padding = legend.padding,
                 legendOptions = legend.options,
                 horiz = this.horiz,
-                width = pick(legendOptions.symbolWidth, horiz ? 200 : 12),
-                height = pick(legendOptions.symbolHeight, horiz ? 12 : 200),
+                width = pick(legendOptions.symbolWidth, horiz ? this.defaultLegendLength : 12),
+                height = pick(legendOptions.symbolHeight, horiz ? 12 : this.defaultLegendLength),
                 labelPadding = pick(legendOptions.labelPadding, horiz ? 16 : 30),
                 itemDistance = pick(legendOptions.itemDistance, 10);
 
@@ -383,7 +391,7 @@
             }
         },
         getPlotLinePath: function (a, b, c, d, pos) {
-            return typeof pos === 'number' ? // crosshairs only // #3969 pos can be 0 !!
+            return isNumber(pos) ? // crosshairs only // #3969 pos can be 0 !!
                 (this.horiz ?
                     ['M', pos - 4, this.top - 6, 'L', pos + 4, this.top - 6, pos, this.top, 'Z'] :
                     ['M', this.left, pos, 'L', this.left - 6, pos + 6, this.left - 6, pos - 6, 'Z']
@@ -519,14 +527,15 @@
             colorAxis = this.chart.colorAxis[0];
 
         if (colorAxis) {
-
-            // Data classes
-            if (colorAxis.options.dataClasses) {
-                allItems = allItems.concat(colorAxis.getDataClassLegendSymbols());
-            // Gradient legend
-            } else {
-                // Add this axis on top
-                allItems.push(colorAxis);
+            if (colorAxis.options.showInLegend) {
+                // Data classes
+                if (colorAxis.options.dataClasses) {
+                    allItems = allItems.concat(colorAxis.getDataClassLegendSymbols());
+                // Gradient legend
+                } else {
+                    // Add this axis on top
+                    allItems.push(colorAxis);
+                }
             }
 
             // Don't add the color axis' series
@@ -663,10 +672,10 @@
             each(series.points, function (point) {
                 var xPad = (options.colsize || 1) / 2,
                     yPad = (options.rowsize || 1) / 2,
-                    x1 = between(Math.round(xAxis.len - xAxis.translate(point.x - xPad, 0, 1, 0, 1)), 0, xAxis.len),
-                    x2 = between(Math.round(xAxis.len - xAxis.translate(point.x + xPad, 0, 1, 0, 1)), 0, xAxis.len),
-                    y1 = between(Math.round(yAxis.translate(point.y - yPad, 0, 1, 0, 1)), 0, yAxis.len),
-                    y2 = between(Math.round(yAxis.translate(point.y + yPad, 0, 1, 0, 1)), 0, yAxis.len);
+                    x1 = between(Math.round(xAxis.len - xAxis.translate(point.x - xPad, 0, 1, 0, 1)), -xAxis.len, 2 * xAxis.len),
+                    x2 = between(Math.round(xAxis.len - xAxis.translate(point.x + xPad, 0, 1, 0, 1)), -xAxis.len, 2 * xAxis.len),
+                    y1 = between(Math.round(yAxis.translate(point.y - yPad, 0, 1, 0, 1)), -yAxis.len, 2 * yAxis.len),
+                    y2 = between(Math.round(yAxis.translate(point.y + yPad, 0, 1, 0, 1)), -yAxis.len, 2 * yAxis.len);
 
                 // Set plotX and plotY for use in K-D-Tree and more
                 point.plotX = point.clientX = (x1 + x2) / 2;
@@ -694,7 +703,7 @@
         animate: noop,
         getBox: noop,
         drawLegendSymbol: LegendSymbolMixin.drawRectangle,
-
+        alignDataLabel: seriesTypes.column.prototype.alignDataLabel,
         getExtremes: function () {
             // Get the extremes from the value data
             Series.prototype.getExtremes.call(this, this.valueData);
