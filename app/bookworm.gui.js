@@ -790,6 +790,7 @@
       });
       xAxisLabel = year_option["name"];
       yAxisLabel = $(".active", ".counttype").data("label");
+      console.log(chart);
       chart = new Highcharts.Chart({
         chart: {
           renderTo: "chart",
@@ -913,6 +914,8 @@
           }
         }
       });
+
+    console.log(chart);
 
 	/* Add export handlers for buttons in GUI */
     $('.bw-export-png').click(function () {
