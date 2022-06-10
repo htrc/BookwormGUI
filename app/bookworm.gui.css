@@ -1,7 +1,7 @@
 #header_brand h1 {
   font-family: 'Open Sans', sans-serif;
   font-size: 26px;
-  color: #2976a7;
+  color: #000000;
   line-height: 32px;
   cursor: default;
   letter-spacing: 0em;
@@ -9,7 +9,7 @@
 }
 #header_brand h1 a {
   text-decoration: none;
-  color: #000000;
+  color: #2976a7;
 }
 
 h3,
