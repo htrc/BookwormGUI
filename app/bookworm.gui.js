@@ -3,7 +3,7 @@
   $(document).ready(function() {
     var addCommas, addRow, buildQuery, colors, cts, data, firstQuery, fixColors,
      fixEditBoxPositions, fixSlugs, fixTime, fixXButton, getDate, getHash, 
-     getSmoothing, hexColors, initializeSelectBoxes, lazyround,
+     getSmoothing, handleLegendToggle, hexColors, initializeSelectBoxes, lazyround,
      maxTime, metadata, minTime, n_pages, newEditBox, newSliders, numToReadText, 
     options, page, permQuery, renderChart, rows, runQuery, search_button, 
     showBooks, time_array, toggler, validateQuery, year_option,bookLinks;
@@ -900,7 +900,8 @@
             },
             cursor: "pointer",
             events: {
-              click: showBooks
+              click: showBooks,
+              legendItemClick: handleLegendToggle
             }
           }
         },
@@ -1002,6 +1003,10 @@
         },
         error:function(exception){console.log('Exception:'+exception);}
       });
+    };
+    handleLegendToggle = function(event) {
+      var visibility = this.visible ? 'visible' : 'hidden';
+      alert(visibility)
     };
     page = 1;
     $("#books").on("click", "ul.pagination a", function(event) {

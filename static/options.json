@@ -27,132 +27,132 @@
           "2": {
             "dbcode": "2",
             "name": "Language and Literature",
-            "shortname": "Language and Literature"
+            "shortname": "Language and Literature (LCC: P)"
           },
           "3": {
             "dbcode": "3",
             "name": "Social Sciences",
-            "shortname": "Social Sciences"
+            "shortname": "Social Sciences (LCC: H)"
           },
           "4": {
             "dbcode": "4",
             "name": "General and Old World History",
-            "shortname": "General and Old World History"
+            "shortname": "General and Old World History (LCC: D)"
           },
           "5": {
             "dbcode": "5",
             "name": "Science",
-            "shortname": "Science"
+            "shortname": "Science (LCC: Q)"
           },
           "6": {
             "dbcode": "6",
             "name": "Philosophy, Psychology, and Religion",
-            "shortname": "Philosophy, Psychology, and Religion"
+            "shortname": "Philosophy, Psychology, and Religion (LCC: B)"
           },
           "7": {
             "dbcode": "7",
             "name": "Technology",
-            "shortname": "Technology"
+            "shortname": "Technology (LCC: T)"
           },
           "8": {
             "dbcode": "8",
             "name": "Law",
-            "shortname": "Law"
+            "shortname": "Law (LCC: K)"
           },
           "9": {
             "dbcode": "9",
             "name": "Political Science",
-            "shortname": "Political Science"
+            "shortname": "Political Science (LCC: J)"
           },
           "10": {
             "dbcode": "10",
             "name": "General Works",
-            "shortname": "General Works"
+            "shortname": "General Works (LCC: A)"
           },
           "11": {
             "dbcode": "11",
             "name": "History of the United States and British, Dutch, French, and Latin America",
-            "shortname": "History of the United States and British, Dutch, French, and Latin America"
+            "shortname": "History of the United States and British, Dutch, French, and Latin America (LCC: F)"
           },
           "12": {
             "dbcode": "12",
             "name": "Bibliography, Library Science, and General Information Resources",
-            "shortname": "Bibliography, Library Science, and General Information Resources"
+            "shortname": "Bibliography, Library Science, and General Information Resources (LCC: Z)"
           },
           "13": {
             "dbcode": "13",
             "name": "Medicine",
-            "shortname": "Medicine"
+            "shortname": "Medicine (LCC: R)"
           },
           "14": {
             "dbcode": "14",
             "name": "Fine Arts",
-            "shortname": "Fine Arts"
+            "shortname": "Fine Arts (LCC: N)"
           },
           "15": {
             "dbcode": "15",
             "name": "Agriculture",
-            "shortname": "Agriculture"
+            "shortname": "Agriculture (LCC: S)"
           },
           "16": {
             "dbcode": "16",
             "name": "Education",
-            "shortname": "Education"
+            "shortname": "Education (LCC: L)"
           },
           "17": {
             "dbcode": "17",
             "name": "Geography, Anthropology, and Recreation",
-            "shortname": "Geography, Anthropology, and Recreation"
+            "shortname": "Geography, Anthropology, and Recreation (LCC: G)"
           },
           "18": {
             "dbcode": "18",
             "name": "History of America",
-            "shortname": "History of America"
+            "shortname": "History of America (LCC: E)"
           },
           "19": {
             "dbcode": "19",
             "name": "Music",
-            "shortname": "Music"
+            "shortname": "Music (LCC: M)"
           },
           "20": {
             "dbcode": "20",
             "name": "Auxiliary Sciences of History",
-            "shortname": "Auxiliary Sciences of History"
+            "shortname": "Auxiliary Sciences of History (LCC: C)"
           },
           "21": {
             "dbcode": "21",
             "name": "Military Science",
-            "shortname": "Military Science"
+            "shortname": "Military Science (LCC: U)"
           },
           "22": {
             "dbcode": "22",
             "name": "Naval Science",
-            "shortname": "Naval Science"
+            "shortname": "Naval Science (LCC: V)"
           }
         },
         "sort_order": [
           "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6",
-          "7",
-          "8",
-          "9",
           "10",
-          "11",
-          "12",
-          "13",
-          "14",
-          "15",
-          "16",
-          "17",
-          "18",
-          "19",
+          "6",
           "20",
+          "4",
+          "18",
+          "11",
+          "17",
+          "3",
+          "9",
+          "8",
+          "16",
+          "19",
+          "14",
+          "2",
+          "5",
+          "13",
+          "15",
+          "7",
           "21",
-          "22"
+          "22",
+          "12"
         ]
       }
     },
@@ -170,487 +170,487 @@
           "2": {
             "dbcode": "2",
             "name": "Industries. Land use. Labor",
-            "shortname": "Industries. Land use. Labor"
+            "shortname": "Industries. Land use. Labor (LCC: HD)"
           },
           "3": {
             "dbcode": "3",
             "name": "Asia",
-            "shortname": "Asia"
+            "shortname": "Asia (LCC: DS)"
           },
           "4": {
             "dbcode": "4",
             "name": "Books (General). Writing. Paleography",
-            "shortname": "Books (General). Writing. Paleography"
+            "shortname": "Books (General). Writing. Paleography (LCC: Z)"
           },
           "5": {
             "dbcode": "5",
             "name": "French literature Italian literature Spanish literature Portuguese literature",
-            "shortname": "French literature Italian literature Spanish literature Portuguese literature"
+            "shortname": "French literature Italian literature Spanish literature Portuguese literature (LCC: PQ)"
           },
           "6": {
             "dbcode": "6",
             "name": "United States",
-            "shortname": "United States"
+            "shortname": "United States (LCC: KF)"
           },
           "7": {
             "dbcode": "7",
             "name": "Economic history and conditions",
-            "shortname": "Economic history and conditions"
+            "shortname": "Economic history and conditions (LCC: HC)"
           },
           "8": {
             "dbcode": "8",
             "name": "Languages and literatures of Eastern Asia, Africa, Oceania",
-            "shortname": "Languages and literatures of Eastern Asia, Africa, Oceania"
+            "shortname": "Languages and literatures of Eastern Asia, Africa, Oceania (LCC: PL)"
           },
           "9": {
             "dbcode": "9",
             "name": "English literature",
-            "shortname": "English literature"
+            "shortname": "English literature (LCC: PR)"
           },
           "10": {
             "dbcode": "10",
             "name": "Periodicals",
-            "shortname": "Periodicals"
+            "shortname": "Periodicals (LCC: AP)"
           },
           "11": {
             "dbcode": "11",
             "name": "American literature",
-            "shortname": "American literature"
+            "shortname": "American literature (LCC: PS)"
           },
           "12": {
             "dbcode": "12",
             "name": "Literature (General)",
-            "shortname": "Literature (General)"
+            "shortname": "Literature (General) (LCC: PN)"
           },
           "13": {
             "dbcode": "13",
             "name": "History (General)",
-            "shortname": "History (General)"
+            "shortname": "History (General) (LCC: D)"
           },
           "14": {
             "dbcode": "14",
             "name": "Germanic literature",
-            "shortname": "Germanic literature"
+            "shortname": "Germanic literature (LCC: PT)"
           },
           "15": {
             "dbcode": "15",
             "name": "Mathematics",
-            "shortname": "Mathematics"
+            "shortname": "Mathematics (LCC: QA)"
           },
           "16": {
             "dbcode": "16",
             "name": "Physics",
-            "shortname": "Physics"
+            "shortname": "Physics (LCC: QC)"
           },
           "17": {
             "dbcode": "17",
             "name": "Fiction and juvenile belles lettres",
-            "shortname": "Fiction and juvenile belles lettres"
+            "shortname": "Fiction and juvenile belles lettres (LCC: PZ)"
           },
           "18": {
             "dbcode": "18",
             "name": "Science (General)",
-            "shortname": "Science (General)"
+            "shortname": "Science (General) (LCC: Q)"
           },
           "19": {
             "dbcode": "19",
             "name": "Commerce",
-            "shortname": "Commerce"
+            "shortname": "Commerce (LCC: HF)"
           },
           "20": {
             "dbcode": "20",
             "name": "Slavic languages and literatures. Baltic languages. Albanian language",
-            "shortname": "Slavic languages and literatures. Baltic languages. Albanian language"
+            "shortname": "Slavic languages and literatures. Baltic languages. Albanian language (LCC: PG)"
           },
           "21": {
             "dbcode": "21",
             "name": "Agriculture (General)",
-            "shortname": "Agriculture (General)"
+            "shortname": "Agriculture (General) (LCC: S)"
           },
           "22": {
             "dbcode": "22",
             "name": "Geology",
-            "shortname": "Geology"
+            "shortname": "Geology (LCC: QE)"
           },
           "23": {
             "dbcode": "23",
             "name": "Christian Denominations",
-            "shortname": "Christian Denominations"
+            "shortname": "Christian Denominations (LCC: BX)"
           },
           "24": {
             "dbcode": "24",
             "name": "Finance",
-            "shortname": "Finance"
+            "shortname": "Finance (LCC: HG)"
           },
           "25": {
             "dbcode": "25",
             "name": "Chemistry",
-            "shortname": "Chemistry"
+            "shortname": "Chemistry (LCC: QD)"
           },
           "26": {
             "dbcode": "26",
             "name": "Statistics",
-            "shortname": "Statistics"
+            "shortname": "Statistics (LCC: HA)"
           },
           "27": {
             "dbcode": "27",
             "name": "Indo-Iranian languages and literatures",
-            "shortname": "Indo-Iranian languages and literatures"
+            "shortname": "Indo-Iranian languages and literatures (LCC: PK)"
           },
           "28": {
             "dbcode": "28",
             "name": "Visual arts",
-            "shortname": "Visual arts"
+            "shortname": "Visual arts (LCC: N)"
           },
           "29": {
             "dbcode": "29",
             "name": "General legislative and executive papers",
-            "shortname": "General legislative and executive papers"
+            "shortname": "General legislative and executive papers (LCC: J)"
           },
           "30": {
             "dbcode": "30",
             "name": "Social pathology. Social and public welfare. Criminology",
-            "shortname": "Social pathology. Social and public welfare. Criminology"
+            "shortname": "Social pathology. Social and public welfare. Criminology (LCC: HV)"
           },
           "31": {
             "dbcode": "31",
             "name": "Great Britain",
-            "shortname": "Great Britain"
+            "shortname": "Great Britain (LCC: DA)"
           },
           "32": {
             "dbcode": "32",
             "name": "Philosophy (General)",
-            "shortname": "Philosophy (General)"
+            "shortname": "Philosophy (General) (LCC: B)"
           },
           "33": {
             "dbcode": "33",
             "name": "Natural history Biology",
-            "shortname": "Natural history Biology"
+            "shortname": "Natural history Biology (LCC: QH)"
           },
           "34": {
             "dbcode": "34",
             "name": "Zoology",
-            "shortname": "Zoology"
+            "shortname": "Zoology (LCC: QL)"
           },
           "35": {
             "dbcode": "35",
             "name": "Theory and practice of education",
-            "shortname": "Theory and practice of education"
+            "shortname": "Theory and practice of education (LCC: LB)"
           },
           "36": {
             "dbcode": "36",
             "name": "Internal medicine",
-            "shortname": "Internal medicine"
+            "shortname": "Internal medicine (LCC: RC)"
           },
           "37": {
             "dbcode": "37",
             "name": "Russia. Soviet Union. Former Soviet Republics Poland",
-            "shortname": "Russia. Soviet Union. Former Soviet Republics Poland"
+            "shortname": "Russia. Soviet Union. Former Soviet Republics Poland (LCC: DK)"
           },
           "38": {
             "dbcode": "38",
             "name": "Academies and learned societies",
-            "shortname": "Academies and learned societies"
+            "shortname": "Academies and learned societies (LCC: AS)"
           },
           "39": {
             "dbcode": "39",
             "name": "Literature on music",
-            "shortname": "Literature on music"
+            "shortname": "Literature on music (LCC: ML)"
           },
           "40": {
             "dbcode": "40",
             "name": "Public finance",
-            "shortname": "Public finance"
+            "shortname": "Public finance (LCC: HJ)"
           },
           "41": {
             "dbcode": "41",
             "name": "France Andorra Monaco",
-            "shortname": "France Andorra Monaco"
+            "shortname": "France Andorra Monaco (LCC: DC)"
           },
           "42": {
             "dbcode": "42",
             "name": "Engineering Civil engineering (General)",
-            "shortname": "Engineering Civil engineering (General)"
+            "shortname": "Engineering Civil engineering (General) (LCC: TA)"
           },
           "43": {
             "dbcode": "43",
             "name": "Law in general. Comparative and uniform law. Jurisprudence",
-            "shortname": "Law in general. Comparative and uniform law. Jurisprudence"
+            "shortname": "Law in general. Comparative and uniform law. Jurisprudence (LCC: K)"
           },
           "44": {
             "dbcode": "44",
             "name": "Transportation and communications",
-            "shortname": "Transportation and communications"
+            "shortname": "Transportation and communications (LCC: HE)"
           },
           "45": {
             "dbcode": "45",
             "name": "Economic theory. Demography",
-            "shortname": "Economic theory. Demography"
+            "shortname": "Economic theory. Demography (LCC: HB)"
           },
           "46": {
             "dbcode": "46",
             "name": "Greek language and literature. Latin language and literature",
-            "shortname": "Greek language and literature. Latin language and literature"
+            "shortname": "Greek language and literature. Latin language and literature (LCC: PA)"
           },
           "47": {
             "dbcode": "47",
             "name": "The family. Marriage. Women",
-            "shortname": "The family. Marriage. Women"
+            "shortname": "The family. Marriage. Women (LCC: HQ)"
           },
           "48": {
             "dbcode": "48",
             "name": "Electrical engineering. Electronics. Nuclear engineering",
-            "shortname": "Electrical engineering. Electronics. Nuclear engineering"
+            "shortname": "Electrical engineering. Electronics. Nuclear engineering (LCC: TK)"
           },
           "49": {
             "dbcode": "49",
             "name": "Religions. Mythology. Rationalism",
-            "shortname": "Religions. Mythology. Rationalism"
+            "shortname": "Religions. Mythology. Rationalism (LCC: BL)"
           },
           "50": {
             "dbcode": "50",
             "name": "Architecture",
-            "shortname": "Architecture"
+            "shortname": "Architecture (LCC: NA)"
           },
           "51": {
             "dbcode": "51",
             "name": "International law, see JZ and KZ (obsolete)",
-            "shortname": "International law, see JZ and KZ (obsolete)"
+            "shortname": "International law, see JZ and KZ (obsolete) (LCC: JX)"
           },
           "52": {
             "dbcode": "52",
             "name": "Psychology",
-            "shortname": "Psychology"
+            "shortname": "Psychology (LCC: BF)"
           },
           "53": {
             "dbcode": "53",
             "name": "Mining engineering. Metallurgy",
-            "shortname": "Mining engineering. Metallurgy"
+            "shortname": "Mining engineering. Metallurgy (LCC: TN)"
           },
           "54": {
             "dbcode": "54",
             "name": "Music",
-            "shortname": "Music"
+            "shortname": "Music (LCC: M)"
           },
           "55": {
             "dbcode": "55",
             "name": "Geography (General)",
-            "shortname": "Geography (General)"
+            "shortname": "Geography (General) (LCC: G)"
           },
           "56": {
             "dbcode": "56",
             "name": "Public aspects of medicine",
-            "shortname": "Public aspects of medicine"
+            "shortname": "Public aspects of medicine (LCC: RA)"
           },
           "57": {
             "dbcode": "57",
             "name": "Motor vehicles. Aeronautics. Astronautics",
-            "shortname": "Motor vehicles. Aeronautics. Astronautics"
+            "shortname": "Motor vehicles. Aeronautics. Astronautics (LCC: TL)"
           },
           "58": {
             "dbcode": "58",
             "name": "Germany",
-            "shortname": "Germany"
+            "shortname": "Germany  (LCC: DD)"
           },
           "59": {
             "dbcode": "59",
             "name": "Oriental languages and literatures",
-            "shortname": "Oriental languages and literatures"
+            "shortname": "Oriental languages and literatures (LCC: PJ)"
           },
           "60": {
             "dbcode": "60",
             "name": "Africa",
-            "shortname": "Africa"
+            "shortname": "Africa (LCC: DT)"
           },
           "61": {
             "dbcode": "61",
             "name": "Horticulture. Plant propagation. Plant breeding",
-            "shortname": "Horticulture. Plant propagation. Plant breeding"
+            "shortname": "Horticulture. Plant propagation. Plant breeding (LCC: SB)"
           },
           "62": {
             "dbcode": "62",
             "name": "Technology (General)",
-            "shortname": "Technology (General)"
+            "shortname": "Technology (General) (LCC: T)"
           },
           "63": {
             "dbcode": "63",
             "name": "Political institutions and public administration (United States)",
-            "shortname": "Political institutions and public administration (United States)"
+            "shortname": "Political institutions and public administration (United States) (LCC: JK)"
           },
           "64": {
             "dbcode": "64",
             "name": "Botany",
-            "shortname": "Botany"
+            "shortname": "Botany (LCC: QK)"
           },
           "65": {
             "dbcode": "65",
             "name": "Education (General)",
-            "shortname": "Education (General)"
+            "shortname": "Education (General) (LCC: L)"
           },
           "66": {
             "dbcode": "66",
             "name": "Italy Malta",
-            "shortname": "Italy Malta"
+            "shortname": "Italy Malta (LCC: DG)"
           },
           "67": {
             "dbcode": "67",
             "name": "Philology. Linguistics",
-            "shortname": "Philology. Linguistics"
+            "shortname": "Philology. Linguistics (LCC: P)"
           },
           "68": {
             "dbcode": "68",
             "name": "Christianity",
-            "shortname": "Christianity"
+            "shortname": "Christianity (LCC: BR)"
           },
           "69": {
             "dbcode": "69",
             "name": "Military science (General)",
-            "shortname": "Military science (General)"
+            "shortname": "Military science (General) (LCC: U)"
           },
           "70": {
             "dbcode": "70",
             "name": "Physiology",
-            "shortname": "Physiology"
+            "shortname": "Physiology (LCC: QP)"
           },
           "71": {
             "dbcode": "71",
             "name": "Europe",
-            "shortname": "Europe"
+            "shortname": "Europe (LCC: KJ-KKZ)"
           },
           "72": {
             "dbcode": "72",
             "name": "Political institutions and public administration (Europe)",
-            "shortname": "Political institutions and public administration (Europe)"
+            "shortname": "Political institutions and public administration (Europe) (LCC: JN)"
           },
           "73": {
             "dbcode": "73",
             "name": "Painting",
-            "shortname": "Painting"
+            "shortname": "Painting (LCC: ND)"
           },
           "74": {
             "dbcode": "74",
             "name": "Medicine (General)",
-            "shortname": "Medicine (General)"
+            "shortname": "Medicine (General) (LCC: R)"
           },
           "75": {
             "dbcode": "75",
             "name": "Collections. Series. Collected works",
-            "shortname": "Collections. Series. Collected works"
+            "shortname": "Collections. Series. Collected works (LCC: AC)"
           },
           "76": {
             "dbcode": "76",
             "name": "Anthropology",
-            "shortname": "Anthropology"
+            "shortname": "Anthropology (LCC: GN)"
           },
           "77": {
             "dbcode": "77",
             "name": "Chemical technology",
-            "shortname": "Chemical technology"
+            "shortname": "Chemical technology (LCC: TP)"
           },
           "78": {
             "dbcode": "78",
             "name": "Social history and conditions. Social problems. Social reform",
-            "shortname": "Social history and conditions. Social problems. Social reform"
+            "shortname": "Social history and conditions. Social problems. Social reform (LCC: HN)"
           },
           "79": {
             "dbcode": "79",
             "name": "Special aspects of education",
-            "shortname": "Special aspects of education"
+            "shortname": "Special aspects of education (LCC: LC)"
           },
           "80": {
             "dbcode": "80",
             "name": "Social sciences (General)",
-            "shortname": "Social sciences (General)"
+            "shortname": "Social sciences (General) (LCC: H)"
           },
           "81": {
             "dbcode": "81",
             "name": "Astronomy",
-            "shortname": "Astronomy"
+            "shortname": "Astronomy (LCC: QB)"
           },
           "82": {
             "dbcode": "82",
             "name": "Recreation. Leisure",
-            "shortname": "Recreation. Leisure"
+            "shortname": "Recreation. Leisure (LCC: GV)"
           },
           "83": {
             "dbcode": "83",
             "name": "Romanic languages",
-            "shortname": "Romanic languages"
+            "shortname": "Romanic languages (LCC: PC)"
           },
           "84": {
             "dbcode": "84",
             "name": "Political institutions and public administration (Asia, Africa, Australia, Pacific Area, etc.)",
-            "shortname": "Political institutions and public administration (Asia, Africa, Australia, Pacific Area, etc.)"
+            "shortname": "Political institutions and public administration (Asia, Africa, Australia, Pacific Area, etc.) (LCC: JQ)"
           },
           "85": {
             "dbcode": "85",
             "name": "Islam. Bahaism. Theosophy, etc.",
-            "shortname": "Islam. Bahaism. Theosophy, etc."
+            "shortname": "Islam. Bahaism. Theosophy, etc. (LCC: BP)"
           },
           "86": {
             "dbcode": "86",
             "name": "History of education",
-            "shortname": "History of education"
+            "shortname": "History of education (LCC: LA)"
           },
           "87": {
             "dbcode": "87",
             "name": "Genealogy",
-            "shortname": "Genealogy"
+            "shortname": "Genealogy (LCC: CS)"
           },
           "88": {
             "dbcode": "88",
             "name": "Socialism. Communism. Anarchism",
-            "shortname": "Socialism. Communism. Anarchism"
+            "shortname": "Socialism. Communism. Anarchism (LCC: HX)"
           },
           "89": {
             "dbcode": "89",
             "name": "Mechanical engineering and machinery",
-            "shortname": "Mechanical engineering and machinery"
+            "shortname": "Mechanical engineering and machinery (LCC: TJ)"
           },
           "90": {
             "dbcode": "90",
             "name": "The Bible",
-            "shortname": "The Bible"
+            "shortname": "The Bible (LCC: BS)"
           },
           "91": {
             "dbcode": "91",
             "name": "Balkan Peninsula",
-            "shortname": "Balkan Peninsula"
+            "shortname": "Balkan Peninsula (LCC: DR)"
           },
           "92": {
             "dbcode": "92",
             "name": "Environmental technology. Sanitary engineering",
-            "shortname": "Environmental technology. Sanitary engineering"
+            "shortname": "Environmental technology. Sanitary engineering (LCC: TD)"
           },
           "93": {
             "dbcode": "93",
             "name": "Spain Portugal",
-            "shortname": "Spain Portugal"
+            "shortname": "Spain Portugal (LCC: DP)"
           },
           "94": {
             "dbcode": "94",
             "name": "Forestry. Arboriculture. Silviculture",
-            "shortname": "Forestry. Arboriculture. Silviculture"
+            "shortname": "Forestry. Arboriculture. Silviculture (LCC: SD)"
           },
           "95": {
             "dbcode": "95",
             "name": "Manufacturing engineering. Mass production",
-            "shortname": "Manufacturing engineering. Mass production"
+            "shortname": "Manufacturing engineering. Mass production (LCC: TS)"
           },
           "96": {
             "dbcode": "96",
             "name": "Practical Theology",
-            "shortname": "Practical Theology"
+            "shortname": "Practical Theology (LCC: BV)"
           },
           "97": {
             "dbcode": "97",
             "name": "Folklore",
-            "shortname": "Folklore"
+            "shortname": "Folklore (LCC: GR)"
           },
           "98": {
             "dbcode": "98",
             "name": "Austria Liechtenstein Hungary Czechoslovakia",
-            "shortname": "Austria Liechtenstein Hungary Czechoslovakia"
+            "shortname": "Austria Liechtenstein Hungary Czechoslovakia (LCC: DB)"
           },
           "99": {
             "dbcode": "99",
@@ -660,542 +660,542 @@
           "100": {
             "dbcode": "100",
             "name": "Animal husbandry. Animal science",
-            "shortname": "Animal husbandry. Animal science"
+            "shortname": "Animal husbandry. Animal science (LCC: SF)"
           },
           "101": {
             "dbcode": "101",
             "name": "Physical geography",
-            "shortname": "Physical geography"
+            "shortname": "Physical geography (LCC: GB)"
           },
           "102": {
             "dbcode": "102",
             "name": "Decorative arts",
-            "shortname": "Decorative arts"
+            "shortname": "Decorative arts (LCC: NK)"
           },
           "103": {
             "dbcode": "103",
             "name": "Aquaculture. Fisheries. Angling",
-            "shortname": "Aquaculture. Fisheries. Angling"
+            "shortname": "Aquaculture. Fisheries. Angling (LCC: SH)"
           },
           "104": {
             "dbcode": "104",
             "name": "Sociology (General)",
-            "shortname": "Sociology (General)"
+            "shortname": "Sociology (General) (LCC: HM)"
           },
           "105": {
             "dbcode": "105",
             "name": "Communities. Classes. Races",
-            "shortname": "Communities. Classes. Races"
+            "shortname": "Communities. Classes. Races (LCC: HT)"
           },
           "106": {
             "dbcode": "106",
             "name": "Home economics",
-            "shortname": "Home economics"
+            "shortname": "Home economics (LCC: TX)"
           },
           "107": {
             "dbcode": "107",
             "name": "Buddhism",
-            "shortname": "Buddhism"
+            "shortname": "Buddhism (LCC: BQ)"
           },
           "108": {
             "dbcode": "108",
             "name": "English language",
-            "shortname": "English language"
+            "shortname": "English language (LCC: PE)"
           },
           "109": {
             "dbcode": "109",
             "name": "Hydraulic engineering. Ocean engineering",
-            "shortname": "Hydraulic engineering. Ocean engineering"
+            "shortname": "Hydraulic engineering. Ocean engineering (LCC: TC)"
           },
           "110": {
             "dbcode": "110",
             "name": "Individual institutions United States",
-            "shortname": "Individual institutions United States"
+            "shortname": "Individual institutions United States (LCC: LD)"
           },
           "111": {
             "dbcode": "111",
             "name": "Political theory",
-            "shortname": "Political theory"
+            "shortname": "Political theory (LCC: JC)"
           },
           "112": {
             "dbcode": "112",
             "name": "Local government. Municipal government",
-            "shortname": "Local government. Municipal government"
+            "shortname": "Local government. Municipal government (LCC: JS)"
           },
           "113": {
             "dbcode": "113",
             "name": "Biography",
-            "shortname": "Biography"
+            "shortname": "Biography (LCC: CT)"
           },
           "114": {
             "dbcode": "114",
             "name": "Judaism",
-            "shortname": "Judaism"
+            "shortname": "Judaism (LCC: BM)"
           },
           "115": {
             "dbcode": "115",
             "name": "Armies: Organization, distribution, military situation",
-            "shortname": "Armies: Organization, distribution, military situation"
+            "shortname": "Armies: Organization, distribution, military situation (LCC: UA)"
           },
           "116": {
             "dbcode": "116",
             "name": "Diplomatics. Archives. Seals",
-            "shortname": "Diplomatics. Archives. Seals"
+            "shortname": "Diplomatics. Archives. Seals (LCC: CD)"
           },
           "117": {
             "dbcode": "117",
             "name": "Northern Europe. Scandinavia",
-            "shortname": "Northern Europe. Scandinavia"
+            "shortname": "Northern Europe. Scandinavia (LCC: DL)"
           },
           "118": {
             "dbcode": "118",
             "name": "Greece",
-            "shortname": "Greece"
+            "shortname": "Greece (LCC: DF)"
           },
           "119": {
             "dbcode": "119",
             "name": "Doctrinal Theology",
-            "shortname": "Doctrinal Theology"
+            "shortname": "Doctrinal Theology (LCC: BT)"
           },
           "120": {
             "dbcode": "120",
             "name": "Surgery",
-            "shortname": "Surgery"
+            "shortname": "Surgery (LCC: RD)"
           },
           "121": {
             "dbcode": "121",
             "name": "Political science (General)",
-            "shortname": "Political science (General)"
+            "shortname": "Political science (General) (LCC: JA)"
           },
           "122": {
             "dbcode": "122",
             "name": "Photography",
-            "shortname": "Photography"
+            "shortname": "Photography (LCC: TR)"
           },
           "123": {
             "dbcode": "123",
             "name": "South America",
-            "shortname": "South America"
+            "shortname": "South America (LCC: KH)"
           },
           "124": {
             "dbcode": "124",
             "name": "Building construction",
-            "shortname": "Building construction"
+            "shortname": "Building construction (LCC: TH)"
           },
           "125": {
             "dbcode": "125",
             "name": "Law of nations",
-            "shortname": "Law of nations"
+            "shortname": "Law of nations (LCC: KZ)"
           },
           "126": {
             "dbcode": "126",
             "name": "Political institutions and public administration (Canada, Latin America, etc.)",
-            "shortname": "Political institutions and public administration (Canada, Latin America, etc.)"
+            "shortname": "Political institutions and public administration (Canada, Latin America, etc.) (LCC: JL)"
           },
           "127": {
             "dbcode": "127",
             "name": "Ethics",
-            "shortname": "Ethics"
+            "shortname": "Ethics (LCC: BJ)"
           },
           "128": {
             "dbcode": "128",
             "name": "Microbiology",
-            "shortname": "Microbiology"
+            "shortname": "Microbiology (LCC: QR)"
           },
           "129": {
             "dbcode": "129",
             "name": "Oceania (South Seas)",
-            "shortname": "Oceania (South Seas)"
+            "shortname": "Oceania (South Seas) (LCC: DU)"
           },
           "130": {
             "dbcode": "130",
             "name": "Oceanography",
-            "shortname": "Oceanography"
+            "shortname": "Oceanography (LCC: GC)"
           },
           "131": {
             "dbcode": "131",
             "name": "West Germanic languages",
-            "shortname": "West Germanic languages"
+            "shortname": "West Germanic languages (LCC: PF)"
           },
           "132": {
             "dbcode": "132",
             "name": "Pediatrics",
-            "shortname": "Pediatrics"
+            "shortname": "Pediatrics (LCC: RJ)"
           },
           "133": {
             "dbcode": "133",
             "name": "History of Civilization",
-            "shortname": "History of Civilization"
+            "shortname": "History of Civilization (LCC: CB)"
           },
           "134": {
             "dbcode": "134",
             "name": "Highway engineering. Roads and pavements",
-            "shortname": "Highway engineering. Roads and pavements"
+            "shortname": "Highway engineering. Roads and pavements (LCC: TE)"
           },
           "135": {
             "dbcode": "135",
             "name": "Therapeutics. Pharmacology",
-            "shortname": "Therapeutics. Pharmacology"
+            "shortname": "Therapeutics. Pharmacology (LCC: RM)"
           },
           "136": {
             "dbcode": "136",
             "name": "Encyclopedias",
-            "shortname": "Encyclopedias"
+            "shortname": "Encyclopedias (LCC: AE)"
           },
           "137": {
             "dbcode": "137",
             "name": "Arts in general",
-            "shortname": "Arts in general"
+            "shortname": "Arts in general (LCC: NX)"
           },
           "138": {
             "dbcode": "138",
             "name": "Drawing. Design. Illustration",
-            "shortname": "Drawing. Design. Illustration"
+            "shortname": "Drawing. Design. Illustration (LCC: NC)"
           },
           "139": {
             "dbcode": "139",
             "name": "United Kingdom and Ireland",
-            "shortname": "United Kingdom and Ireland"
+            "shortname": "United Kingdom and Ireland (LCC: KD-KDK)"
           },
           "140": {
             "dbcode": "140",
             "name": "Sculpture",
-            "shortname": "Sculpture"
+            "shortname": "Sculpture (LCC: NB)"
           },
           "141": {
             "dbcode": "141",
             "name": "Indexes",
-            "shortname": "Indexes"
+            "shortname": "Indexes (LCC: AI)"
           },
           "142": {
             "dbcode": "142",
             "name": "Colonies and colonization. Emigration and immigration. International migration",
-            "shortname": "Colonies and colonization. Emigration and immigration. International migration"
+            "shortname": "Colonies and colonization. Emigration and immigration. International migration (LCC: JV)"
           },
           "143": {
             "dbcode": "143",
             "name": "Manners and customs (General)",
-            "shortname": "Manners and customs (General)"
+            "shortname": "Manners and customs (General) (LCC: GT)"
           },
           "144": {
             "dbcode": "144",
             "name": "Hunting",
-            "shortname": "Hunting"
+            "shortname": "Hunting (LCC: SK)"
           },
           "145": {
             "dbcode": "145",
             "name": "Speculative philosophy",
-            "shortname": "Speculative philosophy"
+            "shortname": "Speculative philosophy (LCC: BD)"
           },
           "146": {
             "dbcode": "146",
             "name": "International relations",
-            "shortname": "International relations"
+            "shortname": "International relations (LCC: JZ)"
           },
           "147": {
             "dbcode": "147",
             "name": "Pharmacy and materia medica",
-            "shortname": "Pharmacy and materia medica"
+            "shortname": "Pharmacy and materia medica (LCC: RS)"
           },
           "148": {
             "dbcode": "148",
             "name": "Uralic languages. Basque language",
-            "shortname": "Uralic languages. Basque language"
+            "shortname": "Uralic languages. Basque language (LCC: PH)"
           },
           "149": {
             "dbcode": "149",
             "name": "Instruction and study",
-            "shortname": "Instruction and study"
+            "shortname": "Instruction and study (LCC: MT)"
           },
           "150": {
             "dbcode": "150",
             "name": "Handicrafts. Arts and crafts",
-            "shortname": "Handicrafts. Arts and crafts"
+            "shortname": "Handicrafts. Arts and crafts (LCC: TT)"
           },
           "151": {
             "dbcode": "151",
             "name": "Dentistry",
-            "shortname": "Dentistry"
+            "shortname": "Dentistry (LCC: RK)"
           },
           "152": {
             "dbcode": "152",
             "name": "Print media",
-            "shortname": "Print media"
+            "shortname": "Print media (LCC: NE)"
           },
           "153": {
             "dbcode": "153",
             "name": "Gynecology and Obstetrics",
-            "shortname": "Gynecology and Obstetrics"
+            "shortname": "Gynecology and Obstetrics (LCC: RG)"
           },
           "154": {
             "dbcode": "154",
             "name": "Individual institutions Europe",
-            "shortname": "Individual institutions Europe"
+            "shortname": "Individual institutions Europe (LCC: LF)"
           },
           "155": {
             "dbcode": "155",
             "name": "Auxiliary Sciences of History (General)",
-            "shortname": "Auxiliary Sciences of History (General)"
+            "shortname": "Auxiliary Sciences of History (General) (LCC: C)"
           },
           "156": {
             "dbcode": "156",
             "name": "Numismatics",
-            "shortname": "Numismatics"
+            "shortname": "Numismatics (LCC: CJ)"
           },
           "157": {
             "dbcode": "157",
             "name": "Railroad engineering and operation",
-            "shortname": "Railroad engineering and operation"
+            "shortname": "Railroad engineering and operation (LCC: TF)"
           },
           "158": {
             "dbcode": "158",
             "name": "Navigation. Merchant marine",
-            "shortname": "Navigation. Merchant marine"
+            "shortname": "Navigation. Merchant marine (LCC: VK)"
           },
           "159": {
             "dbcode": "159",
             "name": "Political institutions and public administration",
-            "shortname": "Political institutions and public administration"
+            "shortname": "Political institutions and public administration (LCC: JF)"
           },
           "160": {
             "dbcode": "160",
             "name": "Pathology",
-            "shortname": "Pathology"
+            "shortname": "Pathology (LCC: RB)"
           },
           "161": {
             "dbcode": "161",
             "name": "Naval architecture. Shipbuilding. Marine engineering",
-            "shortname": "Naval architecture. Shipbuilding. Marine engineering"
+            "shortname": "Naval architecture. Shipbuilding. Marine engineering (LCC: VM)"
           },
           "162": {
             "dbcode": "162",
             "name": "Canada",
-            "shortname": "Canada"
+            "shortname": "Canada (LCC: KE)"
           },
           "163": {
             "dbcode": "163",
             "name": "Modern languages. Celtic languages",
-            "shortname": "Modern languages. Celtic languages"
+            "shortname": "Modern languages. Celtic languages (LCC: PB)"
           },
           "164": {
             "dbcode": "164",
             "name": "Archaeology",
-            "shortname": "Archaeology"
+            "shortname": "Archaeology (LCC: CC)"
           },
           "165": {
             "dbcode": "165",
             "name": "Military engineering. Air forces",
-            "shortname": "Military engineering. Air forces"
+            "shortname": "Military engineering. Air forces (LCC: UG)"
           },
           "166": {
             "dbcode": "166",
             "name": "Nursing",
-            "shortname": "Nursing"
+            "shortname": "Nursing (LCC: RT)"
           },
           "167": {
             "dbcode": "167",
             "name": "College and school magazines and papers",
-            "shortname": "College and school magazines and papers"
+            "shortname": "College and school magazines and papers (LCC: LH)"
           },
           "168": {
             "dbcode": "168",
             "name": "Switzerland",
-            "shortname": "Switzerland"
+            "shortname": "Switzerland (LCC: DQ)"
           },
           "169": {
             "dbcode": "169",
             "name": "Military administration",
-            "shortname": "Military administration"
+            "shortname": "Military administration (LCC: UB)"
           },
           "170": {
             "dbcode": "170",
             "name": "Naval science (General)",
-            "shortname": "Naval science (General)"
+            "shortname": "Naval science (General) (LCC: V)"
           },
           "171": {
             "dbcode": "171",
             "name": "Netherlands (Holland)",
-            "shortname": "Netherlands (Holland)"
+            "shortname": "Netherlands (Holland) (LCC: DJ)"
           },
           "172": {
             "dbcode": "172",
             "name": "Germanic languages. Scandinavian languages",
-            "shortname": "Germanic languages. Scandinavian languages"
+            "shortname": "Germanic languages. Scandinavian languages (LCC: PD)"
           },
           "173": {
             "dbcode": "173",
             "name": "Latin America Mexico and Central America West Indies. Caribbean area",
-            "shortname": "Latin America Mexico and Central America West Indies. Caribbean area"
+            "shortname": "Latin America Mexico and Central America West Indies. Caribbean area (LCC: KG)"
           },
           "174": {
             "dbcode": "174",
             "name": "Low Countries Benelux Countries",
-            "shortname": "Low Countries Benelux Countries"
+            "shortname": "Low Countries Benelux Countries (LCC: DH)"
           },
           "175": {
             "dbcode": "175",
             "name": "Ophthalmology",
-            "shortname": "Ophthalmology"
+            "shortname": "Ophthalmology (LCC: RE)"
           },
           "176": {
             "dbcode": "176",
             "name": "Hyperborean, Native American, and artificial languages",
-            "shortname": "Hyperborean, Native American, and artificial languages"
+            "shortname": "Hyperborean, Native American, and artificial languages (LCC: PM)"
           },
           "177": {
             "dbcode": "177",
             "name": "Greco-Roman World",
-            "shortname": "Greco-Roman World"
+            "shortname": "Greco-Roman World (LCC: DE)"
           },
           "178": {
             "dbcode": "178",
             "name": "Yearbooks. Almanacs. Directories",
-            "shortname": "Yearbooks. Almanacs. Directories"
+            "shortname": "Yearbooks. Almanacs. Directories (LCC: AY)"
           },
           "179": {
             "dbcode": "179",
             "name": "Museums. Collectors and collecting",
-            "shortname": "Museums. Collectors and collecting"
+            "shortname": "Museums. Collectors and collecting (LCC: AM)"
           },
           "180": {
             "dbcode": "180",
             "name": "Human anatomy",
-            "shortname": "Human anatomy"
+            "shortname": "Human anatomy (LCC: QM)"
           },
           "181": {
             "dbcode": "181",
             "name": "Societies: secret, benevolent, etc.",
-            "shortname": "Societies: secret, benevolent, etc."
+            "shortname": "Societies: secret, benevolent, etc. (LCC: HS)"
           },
           "182": {
             "dbcode": "182",
             "name": "Asia and Eurasia, Africa, Pacific Area, and Antarctica",
-            "shortname": "Asia and Eurasia, Africa, Pacific Area, and Antarctica"
+            "shortname": "Asia and Eurasia, Africa, Pacific Area, and Antarctica (LCC: KL-KWX)"
           },
           "183": {
             "dbcode": "183",
             "name": "Logic",
-            "shortname": "Logic"
+            "shortname": "Logic (LCC: BC)"
           },
           "184": {
             "dbcode": "184",
             "name": "Aesthetics",
-            "shortname": "Aesthetics"
+            "shortname": "Aesthetics (LCC: BH)"
           },
           "185": {
             "dbcode": "185",
             "name": "Environmental Sciences",
-            "shortname": "Environmental Sciences"
+            "shortname": "Environmental Sciences (LCC: GE)"
           },
           "186": {
             "dbcode": "186",
             "name": "Dictionaries and other general reference works",
-            "shortname": "Dictionaries and other general reference works"
+            "shortname": "Dictionaries and other general reference works (LCC: AG)"
           },
           "187": {
             "dbcode": "187",
             "name": "Heraldry",
-            "shortname": "Heraldry"
+            "shortname": "Heraldry (LCC: CR)"
           },
           "188": {
             "dbcode": "188",
             "name": "Student fraternities and societies, United States",
-            "shortname": "Student fraternities and societies, United States"
+            "shortname": "Student fraternities and societies, United States (LCC: LJ)"
           },
           "189": {
             "dbcode": "189",
             "name": "Human ecology. Anthropogeography",
-            "shortname": "Human ecology. Anthropogeography"
+            "shortname": "Human ecology. Anthropogeography (LCC: GF)"
           },
           "190": {
             "dbcode": "190",
             "name": "Individual institutions Asia, Africa, Indian Ocean islands, Australia, New Zealand, Pacific islands",
-            "shortname": "Individual institutions Asia, Africa, Indian Ocean islands, Australia, New Zealand, Pacific islands"
+            "shortname": "Individual institutions Asia, Africa, Indian Ocean islands, Australia, New Zealand, Pacific islands (LCC: LG)"
           },
           "191": {
             "dbcode": "191",
             "name": "Otorhinolaryngology",
-            "shortname": "Otorhinolaryngology"
+            "shortname": "Otorhinolaryngology (LCC: RF)"
           },
           "192": {
             "dbcode": "192",
             "name": "Inscriptions. Epigraphy",
-            "shortname": "Inscriptions. Epigraphy"
+            "shortname": "Inscriptions. Epigraphy (LCC: CN)"
           },
           "193": {
             "dbcode": "193",
             "name": "Mathematical geography. Cartography",
-            "shortname": "Mathematical geography. Cartography"
+            "shortname": "Mathematical geography. Cartography (LCC: GA)"
           },
           "194": {
             "dbcode": "194",
             "name": "Bridges",
-            "shortname": "Bridges"
+            "shortname": "Bridges (LCC: TG)"
           },
           "195": {
             "dbcode": "195",
             "name": "Military maintenance and transportation",
-            "shortname": "Military maintenance and transportation"
+            "shortname": "Military maintenance and transportation (LCC: UC)"
           },
           "196": {
             "dbcode": "196",
             "name": "Individual institutions America (except United States)",
-            "shortname": "Individual institutions America (except United States)"
+            "shortname": "Individual institutions America (except United States) (LCC: LE)"
           },
           "197": {
             "dbcode": "197",
             "name": "Navies: Organization, distribution, naval situation",
-            "shortname": "Navies: Organization, distribution, naval situation"
+            "shortname": "Navies: Organization, distribution, naval situation (LCC: VA)"
           },
           "198": {
             "dbcode": "198",
             "name": "Eastern Europe (General)",
-            "shortname": "Eastern Europe (General)"
+            "shortname": "Eastern Europe (General) (LCC: DJK)"
           },
           "199": {
             "dbcode": "199",
             "name": "Artillery",
-            "shortname": "Artillery"
+            "shortname": "Artillery (LCC: UF)"
           },
           "200": {
             "dbcode": "200",
             "name": "Dermatology",
-            "shortname": "Dermatology"
+            "shortname": "Dermatology (LCC: RL)"
           },
           "201": {
             "dbcode": "201",
             "name": "Minor services of navies",
-            "shortname": "Minor services of navies"
+            "shortname": "Minor services of navies (LCC: VG)"
           },
           "202": {
             "dbcode": "202",
             "name": "History of scholarship and learning. The humanities",
-            "shortname": "History of scholarship and learning. The humanities"
+            "shortname": "History of scholarship and learning. The humanities (LCC: AZ)"
           },
           "203": {
             "dbcode": "203",
             "name": "Other military services",
-            "shortname": "Other military services"
+            "shortname": "Other military services (LCC: UH)"
           },
           "204": {
             "dbcode": "204",
             "name": "Homeopathy",
-            "shortname": "Homeopathy"
+            "shortname": "Homeopathy (LCC: RX)"
           },
           "205": {
             "dbcode": "205",
             "name": "Technical Chronology. Calendar",
-            "shortname": "Technical Chronology. Calendar"
+            "shortname": "Technical Chronology. Calendar (LCC: CE)"
           },
           "206": {
             "dbcode": "206",
             "name": "Religious law in general. Comparative religious law. Jurisprudence",
-            "shortname": "Religious law in general. Comparative religious law. Jurisprudence"
+            "shortname": "Religious law in general. Comparative religious law. Jurisprudence (LCC: KB)"
           },
           "207": {
             "dbcode": "207",
             "name": "Other systems of medicine",
-            "shortname": "Other systems of medicine"
+            "shortname": "Other systems of medicine (LCC: RZ)"
           },
           "208": {
             "dbcode": "208",
@@ -1205,267 +1205,267 @@
           "209": {
             "dbcode": "209",
             "name": "Infantry",
-            "shortname": "Infantry"
+            "shortname": "Infantry (LCC: UD)"
           },
           "210": {
             "dbcode": "210",
             "name": "America. North America",
-            "shortname": "America. North America"
+            "shortname": "America. North America (LCC: KDZ)"
           },
           "211": {
             "dbcode": "211",
             "name": "Islamic law",
-            "shortname": "Islamic law"
+            "shortname": "Islamic law (LCC: KBP)"
           },
           "212": {
             "dbcode": "212",
             "name": "Cavalry. Armor",
-            "shortname": "Cavalry. Armor"
+            "shortname": "Cavalry. Armor (LCC: UE)"
           },
           "213": {
             "dbcode": "213",
             "name": "Information resources (General)",
-            "shortname": "Information resources (General)"
+            "shortname": "Information resources (General) (LCC: ZA)"
           },
           "214": {
             "dbcode": "214",
             "name": "Naval administration",
-            "shortname": "Naval administration"
+            "shortname": "Naval administration (LCC: VB)"
           },
           "215": {
             "dbcode": "215",
             "name": "Marines",
-            "shortname": "Marines"
+            "shortname": "Marines (LCC: VE)"
           },
           "216": {
             "dbcode": "216",
             "name": "Naval maintenance",
-            "shortname": "Naval maintenance"
+            "shortname": "Naval maintenance (LCC: VC)"
           },
           "217": {
             "dbcode": "217",
             "name": "Textbooks",
-            "shortname": "Textbooks"
+            "shortname": "Textbooks (LCC: LT)"
           }
         },
         "sort_order": [
           "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6",
-          "7",
-          "8",
-          "9",
+          "75",
+          "136",
+          "186",
+          "141",
+          "179",
           "10",
-          "11",
-          "12",
+          "38",
+          "178",
+          "202",
+          "32",
+          "183",
+          "145",
+          "52",
+          "184",
+          "127",
+          "49",
+          "114",
+          "85",
+          "107",
+          "68",
+          "90",
+          "119",
+          "96",
+          "23",
+          "155",
+          "133",
+          "164",
+          "116",
+          "205",
+          "156",
+          "192",
+          "187",
+          "87",
+          "113",
           "13",
+          "31",
+          "98",
+          "41",
+          "58",
+          "177",
+          "118",
+          "66",
+          "174",
+          "171",
+          "198",
+          "37",
+          "117",
+          "93",
+          "168",
+          "91",
+          "3",
+          "60",
+          "129",
+          "55",
+          "193",
+          "101",
+          "130",
+          "185",
+          "189",
+          "76",
+          "97",
+          "143",
+          "82",
+          "80",
+          "26",
+          "45",
+          "7",
+          "2",
+          "44",
+          "19",
+          "24",
+          "40",
+          "104",
+          "78",
+          "47",
+          "181",
+          "105",
+          "30",
+          "88",
+          "29",
+          "121",
+          "111",
+          "159",
+          "63",
+          "126",
+          "72",
+          "84",
+          "112",
+          "142",
+          "51",
+          "146",
+          "43",
+          "206",
+          "211",
+          "139",
+          "210",
+          "162",
+          "6",
+          "173",
+          "123",
+          "71",
+          "182",
+          "125",
+          "65",
+          "86",
+          "35",
+          "79",
+          "110",
+          "196",
+          "154",
+          "190",
+          "167",
+          "188",
+          "217",
+          "54",
+          "39",
+          "149",
+          "28",
+          "50",
+          "140",
+          "138",
+          "73",
+          "152",
+          "102",
+          "137",
+          "67",
+          "46",
+          "163",
+          "83",
+          "172",
+          "108",
+          "131",
+          "20",
+          "148",
+          "59",
+          "27",
+          "8",
+          "176",
+          "12",
+          "5",
+          "9",
+          "11",
           "14",
-          "15",
-          "16",
           "17",
           "18",
-          "19",
-          "20",
-          "21",
-          "22",
-          "23",
-          "24",
-          "25",
-          "26",
-          "27",
-          "28",
-          "29",
-          "30",
-          "31",
-          "32",
-          "33",
-          "34",
-          "35",
-          "36",
-          "37",
-          "38",
-          "39",
-          "40",
-          "41",
-          "42",
-          "43",
-          "44",
-          "45",
-          "46",
-          "47",
-          "48",
-          "49",
-          "50",
-          "51",
-          "52",
-          "53",
-          "54",
-          "55",
-          "56",
-          "57",
-          "58",
-          "59",
-          "60",
-          "61",
-          "62",
-          "63",
-          "64",
-          "65",
-          "66",
-          "67",
-          "68",
-          "69",
-          "70",
-          "71",
-          "72",
-          "73",
-          "74",
-          "75",
-          "76",
-          "77",
-          "78",
-          "79",
-          "80",
+          "15",
           "81",
-          "82",
-          "83",
-          "84",
-          "85",
-          "86",
-          "87",
-          "88",
-          "89",
-          "90",
-          "91",
-          "92",
-          "93",
-          "94",
-          "95",
-          "96",
-          "97",
-          "98",
-          "99",
-          "100",
-          "101",
-          "102",
-          "103",
-          "104",
-          "105",
-          "106",
-          "107",
-          "108",
-          "109",
-          "110",
-          "111",
-          "112",
-          "113",
-          "114",
-          "115",
-          "116",
-          "117",
-          "118",
-          "119",
-          "120",
-          "121",
-          "122",
-          "123",
-          "124",
-          "125",
-          "126",
-          "127",
-          "128",
-          "129",
-          "130",
-          "131",
-          "132",
-          "133",
-          "134",
-          "135",
-          "136",
-          "137",
-          "138",
-          "139",
-          "140",
-          "141",
-          "142",
-          "143",
-          "144",
-          "145",
-          "146",
-          "147",
-          "148",
-          "149",
-          "150",
-          "151",
-          "152",
-          "153",
-          "154",
-          "155",
-          "156",
-          "157",
-          "158",
-          "159",
-          "160",
-          "161",
-          "162",
-          "163",
-          "164",
-          "165",
-          "166",
-          "167",
-          "168",
-          "169",
-          "170",
-          "171",
-          "172",
-          "173",
-          "174",
-          "175",
-          "176",
-          "177",
-          "178",
-          "179",
+          "16",
+          "25",
+          "22",
+          "33",
+          "64",
+          "34",
           "180",
-          "181",
-          "182",
-          "183",
-          "184",
-          "185",
-          "186",
-          "187",
-          "188",
-          "189",
-          "190",
+          "70",
+          "128",
+          "74",
+          "56",
+          "160",
+          "36",
+          "120",
+          "175",
           "191",
-          "192",
-          "193",
-          "194",
-          "195",
-          "196",
-          "197",
-          "198",
-          "199",
+          "153",
+          "132",
+          "151",
           "200",
-          "201",
-          "202",
-          "203",
+          "135",
+          "147",
+          "166",
           "204",
-          "205",
-          "206",
           "207",
-          "208",
+          "21",
+          "61",
+          "94",
+          "100",
+          "103",
+          "144",
+          "62",
+          "42",
+          "109",
+          "92",
+          "134",
+          "157",
+          "194",
+          "124",
+          "89",
+          "48",
+          "57",
+          "53",
+          "77",
+          "122",
+          "95",
+          "150",
+          "106",
+          "69",
+          "115",
+          "169",
+          "195",
           "209",
-          "210",
-          "211",
           "212",
-          "213",
+          "199",
+          "165",
+          "203",
+          "170",
+          "197",
           "214",
-          "215",
           "216",
-          "217"
+          "215",
+          "201",
+          "158",
+          "161",
+          "4",
+          "213",
+          "99",
+          "208"
         ]
       }
     },
@@ -3812,12 +3812,12 @@
           "27": {
             "dbcode": "27",
             "name": "asu",
-            "shortname": "asu"
+            "shortname": "Arizona State University (asu)"
           },
           "28": {
             "dbcode": "28",
             "name": "miami",
-            "shortname": "miami"
+            "shortname": "University of Miami (miami)"
           },
           "29": {
             "dbcode": "29",
@@ -9979,23 +9979,6 @@
           "9",
           "10",
           "11"
-        ]
-      }
-    },
-    {
-      "type": "categorical",
-      "dbfield": "is_gov_doc__id",
-      "name": "Is Gov Doc",
-      "categorical": {
-        "descriptions": {
-          "1": {
-            "dbcode": "1",
-            "name": "No",
-            "shortname": "No"
-          }
-        },
-        "sort_order": [
-          "1"
         ]
       }
     },
