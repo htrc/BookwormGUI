@@ -785,7 +785,7 @@
           name: groupName,
           data: sdata,
           color: hexColors[i + 1],
-          counter: i+1
+          label: "label" + (i+1)
         };
         series.push(serie);
       });
@@ -872,7 +872,7 @@
           symbolWidth: 0,
           verticalAlign: "top",
           labelFormatter: function() {
-            return "<span id=\"label" + this.counter + "\" style=\"color: " + this.color + ";\">" + this.name + " " + q[this.index] + "</span>";
+            return "<span id=\"" + this.label + "\" style=\"color: " + this.color + ";\">" + this.name + " " + q[this.index] + "</span>";
           },
           itemStyle: {
             fontSize: "110%",
