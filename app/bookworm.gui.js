@@ -785,7 +785,7 @@
           name: groupName,
           data: sdata,
           color: hexColors[i + 1],
-          id: i
+          id: i.toString()
         };
         series.push(serie);
       });
