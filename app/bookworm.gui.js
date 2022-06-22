@@ -3,7 +3,7 @@
   $(document).ready(function() {
     var addCommas, addRow, buildQuery, colors, cts, data, firstQuery, fixColors,
      fixEditBoxPositions, fixSlugs, fixTime, fixXButton, getDate, getHash, 
-     getSmoothing, handleLegendToggle, hexColors, initializeSelectBoxes, lazyround,
+     getSmoothing, hexColors, initializeSelectBoxes, lazyround,
      maxTime, metadata, minTime, n_pages, newEditBox, newSliders, numToReadText, 
     options, page, permQuery, renderChart, rows, runQuery, search_button, 
     showBooks, time_array, toggler, validateQuery, year_option,bookLinks;
@@ -784,8 +784,7 @@
         serie = {
           name: groupName,
           data: sdata,
-          color: hexColors[i + 1],
-          legendColor: hexColors[i + 1]
+          color: hexColors[i + 1]
         };
         series.push(serie);
       });
@@ -872,7 +871,7 @@
           symbolWidth: 0,
           verticalAlign: "top",
           labelFormatter: function() {
-            return "<span>" + this.name + " " + q[this.index] + "</span>";
+            return "<span style=\"color: " + this.color + ";\">" + this.name + " " + q[this.index] + "</span>";
           },
           itemStyle: {
             fontSize: "110%",
@@ -901,8 +900,7 @@
             },
             cursor: "pointer",
             events: {
-              click: showBooks,
-              legendItemClick: handleLegendToggle
+              click: showBooks
             }
           }
         },
@@ -1004,37 +1002,6 @@
         },
         error:function(exception){console.log('Exception:'+exception);}
       });
-    };
-    handleLegendToggle = function(event) {
-      var visibility = this.visible ? 'visible' : 'hidden';
-      console.log("Legend Group:");
-      for (const [key, value] of Object.entries(this.legendGroup)) {
-        console.log(`${key}: ${value}`);
-      }
-      console.log("Legend Group Element:");
-      for (const [key, value] of Object.entries(this.legendGroup.element)) {
-        console.log(`${key}: ${value}`);
-      }
-      console.log("Legend Item:");
-      for (const [key, value] of Object.entries(this.legendItem)) {
-        console.log(`${key}: ${value}`);
-      }
-      console.log("Legend Item Element:");
-      for (const [key, value] of Object.entries(this.legendItem.element)) {
-        console.log(`${key}: ${value}`);
-      }
-      console.log("Legend Item Styles:");
-      for (const [key, value] of Object.entries(this.legendItem.styles)) {
-        console.log(`${key}: ${value}`);
-      }
-      console.log("Legend Item Parent Group:");
-      for (const [key, value] of Object.entries(this.legendItem.parentGroup)) {
-        console.log(`${key}: ${value}`);
-      }
-      console.log("Legend Line Element:");
-      for (const [key, value] of Object.entries(this.legendLine.element)) {
-        console.log(`${key}: ${value}`);
-      }
     };
     page = 1;
     $("#books").on("click", "ul.pagination a", function(event) {
