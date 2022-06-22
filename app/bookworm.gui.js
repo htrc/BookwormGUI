@@ -785,7 +785,7 @@
           name: groupName,
           data: sdata,
           color: hexColors[i + 1],
-          label: "label" + (i+1)
+          label: hexColors[i + 1]
         };
         series.push(serie);
       });
