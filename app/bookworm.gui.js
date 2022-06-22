@@ -872,7 +872,7 @@
           symbolWidth: 0,
           verticalAlign: "top",
           labelFormatter: function() {
-            return "<span id=\"" + this.label + "\" style=\"color: " + this.color + ";\">" + this.name + " " + q[this.index] + "</span>";
+            return "<span id=\"" + this.color + "\" style=\"color: " + this.color + ";\">" + this.name + " " + q[this.index] + "</span>";
           },
           itemStyle: {
             fontSize: "110%",
