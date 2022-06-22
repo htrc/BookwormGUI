@@ -871,12 +871,11 @@
           symbolWidth: 0,
           verticalAlign: "top",
           labelFormatter: function() {
-            return "<span>" + this.name + " " + q[this.index] + "</span>";
+            return "<span style=\"color: " + this.color + ";\">" + this.name + " " + q[this.index] + "</span>";
           },
           itemStyle: {
             fontSize: "110%",
-            fontWeight: "bold",
-            color: this.color
+            fontWeight: "bold"
           }
         },
         series: series,
@@ -1007,6 +1006,10 @@
     };
     handleLegendToggle = function(event) {
       var visibility = this.visible ? 'visible' : 'hidden';
+      console.log("Legend Group:");
+      for (const [key, value] of Object.entries(this.legendGroup)) {
+        console.log(`${key}: ${value}`);
+      }
       console.log("Legend Group Element:");
       for (const [key, value] of Object.entries(this.legendGroup.element)) {
         console.log(`${key}: ${value}`);
