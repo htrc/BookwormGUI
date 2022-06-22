@@ -1006,7 +1006,16 @@
     };
     handleLegendToggle = function(event) {
       var visibility = this.visible ? 'visible' : 'hidden';
-      for (const [key, value] of Object.entries(this)) {
+      console.log("Legend Group:");
+      for (const [key, value] of Object.entries(this.legendGroup)) {
+        console.log(`${key}: ${value}`);
+      }
+      console.log("Legend Item:");
+      for (const [key, value] of Object.entries(this.legendItem)) {
+        console.log(`${key}: ${value}`);
+      }
+      console.log("Legend Line:");
+      for (const [key, value] of Object.entries(this.legendLine)) {
         console.log(`${key}: ${value}`);
       }
     };
