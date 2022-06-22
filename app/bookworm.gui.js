@@ -785,7 +785,7 @@
           name: groupName,
           data: sdata,
           color: hexColors[i + 1],
-          counter: Math.abs(i + 1).toString()
+          counter: i+1
         };
         series.push(serie);
       });
