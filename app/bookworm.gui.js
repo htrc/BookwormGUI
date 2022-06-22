@@ -1006,7 +1006,7 @@
     };
     handleLegendToggle = function(event) {
       var visibility = this.visible ? 'visible' : 'hidden';
-      alert(this)
+      console.log(JSON.stringify(this))
     };
     page = 1;
     $("#books").on("click", "ul.pagination a", function(event) {
