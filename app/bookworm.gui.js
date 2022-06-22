@@ -784,7 +784,8 @@
         serie = {
           name: groupName,
           data: sdata,
-          color: hexColors[i + 1]
+          color: hexColors[i + 1],
+          legendColor: hexColors[i + 1]
         };
         series.push(serie);
       });
