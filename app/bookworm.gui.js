@@ -871,7 +871,7 @@
           symbolWidth: 0,
           verticalAlign: "top",
           labelFormatter: function() {
-            return "<span id=\"" + this.color + "\" style=\"color: " + this.color + ";\">" + this.name + " " + q[this.index] + "</span>";
+            return "<span class=\"" + this.color + "\" style=\"color: " + this.color + ";\">" + this.name + " " + q[this.index] + "</span>";
           },
           itemStyle: {
             fontSize: "110%",
@@ -1006,6 +1006,10 @@
     };
     handleLegendToggle = function(event) {
       var visibility = this.visible ? 'visible' : 'hidden';
+      var class_start = this.legendItem.textStr.indexOf('"#') + 1;
+      var class_end = class_start + this.legendItem.textStr.substring(class_start).indexOf('"');
+      var class_name = this.legendItem.textStr.substring(class_start,class_end);
+      console.log(class_name);
       console.log('Legend Item:')
       for (const [key, value] of Object.entries(this.legendItem)) {
         console.log(`${key}: ${value}`);
