@@ -1018,25 +1018,27 @@
       var query_start = this.legendItem.textStr.indexOf('>') + 1;
       var query_end = query_start + this.legendItem.textStr.substring(query_start).indexOf(' ');
       var query_value = this.legendItem.textStr.substring(query_start,query_end);
-      
+
       var color_start = this.legendItem.textStr.indexOf('"#') + 1;
       var color_end = color_start + this.legendItem.textStr.substring(color_start).indexOf(';');
       var color_value = this.legendItem.textStr.substring(color_start,color_end);
 //      var target_text = $(".highcharts-legend-item > text > tspan[style='fill: " + color_hash + ";']");
-      $(".highcharts-legend-item > text > tspan").each(function() {
-        console.log(this);
-        if ($(this).text().indexOf(query_value) == 0) {
-          if (this.visible) {
+      if (this.visible) {
+        $(".highcharts-legend-item > text > tspan").each(function() {
+          console.log(this);
+          if ($(this).text().indexOf(query_value) == 0) {
             $(this).css('fill','#CCC');
           }
-          else {
+        });
+      }
+      else {
+        $(".highcharts-legend-item > text > tspan").each(function() {
+          console.log(this);
+          if ($(this).text().indexOf(query_value) == 0) {
             $(this).css('fill',color_value);
           }
-        }
-/*        if (this.text().indexOf(query_value) == 0) {
-          console.log(this);
-        }*/
-      });
+        });
+      }
 /*      console.log(target_text);
       for (var tspan in target_text) {
         console.log()
