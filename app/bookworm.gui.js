@@ -1022,7 +1022,15 @@
       $(".highcharts-legend-item > text > tspan").each(function() {
         console.log(this);
         if ($(this).text().indexOf(query_value) == 0) {
-          $(this).css('fill','#CCC');
+          if (this.visible) {
+            $(this).css('fill','#CCC');
+          }
+          else {
+            var color_start = this.legendItem.textStr.indexOf('"#') + 1;
+            var color_end = color_start + this.legendItem.textStr.substring(color_start).indexOf(';');
+            var color_value = this.legendItem.textStr.substring(color_start,color_end);
+            $(this).css('fill',color_value);
+          }
         }
 /*        if (this.text().indexOf(query_value) == 0) {
           console.log(this);
