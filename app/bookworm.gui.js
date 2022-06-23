@@ -1021,6 +1021,7 @@
 //      var target_text = $(".highcharts-legend-item > text > tspan[style='fill: " + color_hash + ";']");
       $(".highcharts-legend-item > text > tspan").each(function() {
         console.log(this);
+        console.log($(this).text());
 /*        if (this.text().indexOf(query_value) == 0) {
           console.log(this);
         }*/
