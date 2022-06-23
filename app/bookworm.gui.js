@@ -870,7 +870,6 @@
           symbolPadding: -2,
           symbolWidth: 0,
           verticalAlign: "top",
-          useHTML: true,
           labelFormatter: function() {
             return "<span class=\"" + this.color.substring(1) + "\" style=\"color: " + this.color + ";\">" + this.name + " " + q[this.index] + "</span>";
           },
@@ -1015,14 +1014,14 @@
       } else {
         $("." + class_name).css('color','#' + class_name);
       }
-/*      console.log('Legend Item:')
+      console.log('Legend Item:')
       for (const [key, value] of Object.entries(this.legendItem)) {
         console.log(`${key}: ${value}`);
       }
       console.log('Legend Item Styles:')
       for (const [key, value] of Object.entries(this.legendItem.styles)) {
         console.log(`${key}: ${value}`);
-      }*/
+      }
     };
     page = 1;
     $("#books").on("click", "ul.pagination a", function(event) {
