@@ -1010,8 +1010,8 @@
       var class_end = class_start + this.legendItem.textStr.substring(class_start).indexOf('"');
       var class_name = this.legendItem.textStr.substring(class_start,class_end);*/
       if (this.visible) {
-        var old_color = this.legendItem.element.getStyle('color');
-        this.legendItem.element.css({color: old_color, color: '#CCC'})
+//        var old_color = this.legendItem.element.getStyle('color');
+        this.legendItem.element.css({color: '#CCC'})
 //        $("." + class_name).css('color','#CCC');
       } //else {
 //        this.legendItem.element.css({color: '#CCC'})
