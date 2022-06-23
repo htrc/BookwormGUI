@@ -1009,15 +1009,19 @@
       var class_start = this.legendItem.textStr.indexOf('"#') + 1;
       var class_end = class_start + this.legendItem.textStr.substring(class_start).indexOf('"');
       var class_name = this.legendItem.textStr.substring(class_start,class_end);
-      console.log(class_name);
-      console.log('Legend Item:')
+      if (this.visible) {
+        $("." + class_name).css('color','#CCC');
+      } else {
+        $("." + class_name).css('color',class_name);
+      }
+/*      console.log('Legend Item:')
       for (const [key, value] of Object.entries(this.legendItem)) {
         console.log(`${key}: ${value}`);
       }
       console.log('Legend Item Styles:')
       for (const [key, value] of Object.entries(this.legendItem.styles)) {
         console.log(`${key}: ${value}`);
-      }
+      }*/
     };
     page = 1;
     $("#books").on("click", "ul.pagination a", function(event) {
