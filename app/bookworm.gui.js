@@ -871,7 +871,7 @@
           symbolWidth: 0,
           verticalAlign: "top",
           labelFormatter: function() {
-            return "<span class=\"" + this.color.substring(1) + "\" style=\"color: " + this.color + ";\">" + this.name + " " + q[this.index] + "</span>";
+            return "<span style=\"color: " + this.color + ";\">" + this.name + " " + q[this.index] + "</span>";
           },
           itemStyle: {
             fontSize: "110%",
@@ -1005,18 +1005,6 @@
       });
     };
     handleLegendToggle = function(event) {
-      var visibility = this.visible ? 'visible' : 'hidden';
-/*      var class_start = this.legendItem.textStr.indexOf('"#') + 2;
-      var class_end = class_start + this.legendItem.textStr.substring(class_start).indexOf('"');
-      var class_name = this.legendItem.textStr.substring(class_start,class_end);*/
-      if (this.visible) {
-//        var old_color = this.legendItem.element.getStyle('color');
-        this.legendItem.element.css({color: '#CCC'})
-//        $("." + class_name).css('color','#CCC');
-      } //else {
-//        this.legendItem.element.css({color: '#CCC'})
-//        $("." + class_name).css('color','#' + class_name);
-//      }
       console.log('Legend Item:')
       for (const [key, value] of Object.entries(this.legendItem)) {
         console.log(`${key}: ${value}`);
@@ -1025,6 +1013,21 @@
       for (const [key, value] of Object.entries(this.legendItem.styles)) {
         console.log(`${key}: ${value}`);
       }
+
+      var visibility = this.visible ? 'visible' : 'hidden';
+      var color_start = this.legendItem.textStr.indexOf('"#') + 1;
+      var color_end = color_start + this.legendItem.textStr.substring(color_start).indexOf('"');
+      var color_hash = this.legendItem.textStr.substring(color_start,color_end);
+      var target_text = $(".highcharts-legend-item > text > tspan[style='fill: " + color_hash + ";']")
+      console.log(target_text);
+//      if (this.visible) {
+//        var old_color = this.legendItem.element.getStyle('color');
+//        this.legendItem.element.css({color: '#CCC'})
+//        $("." + class_name).css('color','#CCC');
+//      } //else {
+//        this.legendItem.element.css({color: '#CCC'})
+//        $("." + class_name).css('color','#' + class_name);
+//      }
     };
     page = 1;
     $("#books").on("click", "ul.pagination a", function(event) {
