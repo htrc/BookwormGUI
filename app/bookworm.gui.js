@@ -1022,7 +1022,7 @@
       var target_text = $(".highcharts-legend-item > text > tspan");
       console.log(target_text);
       for (var tspan in target_text) {
-        if (tspan.text() == query_value) {
+        if (tspan.text().indexOf(query_value) == 0) {
           console.log(tspan);
         }
       }
