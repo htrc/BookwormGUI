@@ -1035,6 +1035,7 @@
         $(".highcharts-legend-item > text > tspan").each(function() {
           console.log(this);
           if ($(this).text().indexOf(query_value) == 0) {
+            console.log(color_value)
             $(this).css('fill',color_value);
           }
         });
