@@ -784,8 +784,7 @@
         serie = {
           name: groupName,
           data: sdata,
-          color: hexColors[i + 1],
-          label: hexColors[i + 1]
+          color: hexColors[i + 1]
         };
         series.push(serie);
       });
@@ -1009,6 +1008,10 @@
       var visibility = this.visible ? 'visible' : 'hidden';
       console.log('Legend Item:')
       for (const [key, value] of Object.entries(this.legendItem)) {
+        console.log(`${key}: ${value}`);
+      }
+      console.log('Legend Item Styles:')
+      for (const [key, value] of Object.entries(this.legendItem.styles)) {
         console.log(`${key}: ${value}`);
       }
     };
