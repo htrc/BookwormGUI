@@ -1015,12 +1015,17 @@
       }
 
       var visibility = this.visible ? 'visible' : 'hidden';
-      var color_start = this.legendItem.textStr.indexOf('"#') + 1;
-      var color_end = color_start + this.legendItem.textStr.substring(color_start).indexOf('"');
-      var color_hash = this.legendItem.textStr.substring(color_start,color_end);
+      var query_start = this.legendItem.textStr.indexOf('>') + 1;
+      var query_end = query_start + this.legendItem.textStr.substring(query_start).indexOf(' ');
+      var query_value = this.legendItem.textStr.substring(query_start,query_end);
 //      var target_text = $(".highcharts-legend-item > text > tspan[style='fill: " + color_hash + ";']");
       var target_text = $(".highcharts-legend-item > text > tspan");
       console.log(target_text);
+      for (var tspan in target_text) {
+        if (tspan.text() == query_value) {
+          console.log(tspan);
+        }
+      }
 //      if (this.visible) {
 //        var old_color = this.legendItem.element.getStyle('color');
 //        this.legendItem.element.css({color: '#CCC'})
