@@ -870,6 +870,7 @@
           symbolPadding: -2,
           symbolWidth: 0,
           verticalAlign: "top",
+          useHTML: true,
           labelFormatter: function() {
             return "<span class=\"" + this.color + "\" style=\"color: " + this.color + ";\">" + this.name + " " + q[this.index] + "</span>";
           },
