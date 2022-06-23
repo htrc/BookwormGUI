@@ -1018,7 +1018,8 @@
       var color_start = this.legendItem.textStr.indexOf('"#') + 1;
       var color_end = color_start + this.legendItem.textStr.substring(color_start).indexOf('"');
       var color_hash = this.legendItem.textStr.substring(color_start,color_end);
-      var target_text = $(".highcharts-legend-item > text > tspan[style='fill: " + color_hash + ";']")
+//      var target_text = $(".highcharts-legend-item > text > tspan[style='fill: " + color_hash + ";']");
+      var target_text = $(".highcharts-legend-item > text > tspan");
       console.log(target_text);
 //      if (this.visible) {
 //        var old_color = this.legendItem.element.getStyle('color');
