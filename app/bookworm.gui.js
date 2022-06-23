@@ -1020,9 +1020,10 @@
       var query_value = this.legendItem.textStr.substring(query_start,query_end);
 //      var target_text = $(".highcharts-legend-item > text > tspan[style='fill: " + color_hash + ";']");
       $(".highcharts-legend-item > text > tspan").each(function() {
-        if (this.text().indexOf(query_value) == 0) {
+        console.log(this);
+/*        if (this.text().indexOf(query_value) == 0) {
           console.log(this);
-        }
+        }*/
       });
 /*      console.log(target_text);
       for (var tspan in target_text) {
