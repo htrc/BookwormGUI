@@ -9991,29 +9991,29 @@
           "1": {
             "dbcode": "1",
             "name": "M - Between 150 and 350",
-            "shortname": "M - Between 150 and 350"
+            "shortname": "M - Between 150pp. and 350pp."
           },
           "2": {
             "dbcode": "2",
             "name": "S - Less than 150",
-            "shortname": "S - Less than 150"
+            "shortname": "S - Less than 150pp."
           },
           "3": {
             "dbcode": "3",
             "name": "XL - Greater than 550",
-            "shortname": "XL - Greater than 550"
+            "shortname": "XL - Greater than 550pp."
           },
           "4": {
             "dbcode": "4",
             "name": "L - Between 350 and 550",
-            "shortname": "L - Between 350 and 550"
+            "shortname": "L - Between 350pp. and 550pp."
           }
         },
         "sort_order": [
-          "1",
           "2",
-          "3",
-          "4"
+          "1",
+          "4",
+          "3"
         ]
       }
     },
@@ -10045,10 +10045,10 @@
           }
         },
         "sort_order": [
-          "1",
           "2",
           "3",
-          "4"
+          "4",
+          "1"
         ]
       }
     },
