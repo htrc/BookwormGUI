@@ -4,7 +4,7 @@
     "dbname": "Bookworm2021",
     "itemName": "volume",
     "sourceName": "HathiTrust",
-    "host": "https://bookworm.htrc.illinois.edu/develop/cgi-bin",
+    "host": "https://bookworm.htrc.illinois.edu/cgi-bin",
     "sourceURL": "http://hathitrust.org"
   },
   "ui_components": [
