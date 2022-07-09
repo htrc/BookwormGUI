@@ -4,7 +4,8 @@ function get_short_google_url(long_url, func)
 	// specific domain addresses and must be registered as an application
 	var apiKey = 'AIzaSyAeMWvbpyg19qXOvkwNZZK1q0tXrZ6Z90Q';
 	
-	if(gapi.client != "undefined" && gapi.client){
+//	if(gapi.client != "undefined" && gapi.client){
+	try {
 		gapi.client.setApiKey(apiKey);
 		gapi.client.load('urlshortener', 'v1', function() {
 			var request = gapi.client.urlshortener.url.insert({
@@ -21,7 +22,8 @@ function get_short_google_url(long_url, func)
 	    });
 		});
 	}
-	else{
+//	else{
+	catch (error) {
 		func("http://goo.gl/NjxlF4");
 	}
 
