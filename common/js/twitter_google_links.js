@@ -1,4 +1,3 @@
-
 function get_short_google_url(long_url, func)
 {
 	// NOTE - This is the Google Developer Public API Key - can only be called from
@@ -25,6 +24,8 @@ function get_short_google_url(long_url, func)
 	else{
 		func("http://goo.gl/NjxlF4");
 	}
+
+
 }
 
 function updateTwitterValues(share_url, title) {

@@ -1,3 +1,4 @@
-The HTRC branch of the BookwormGUI.
+BookwormGUI
+-------------
 
-Hathitrust+Bookworm is available at http://bookworm.htrc.illinois.edu/
+The line chart visualization for Bookworm. Settings are in options.json.
