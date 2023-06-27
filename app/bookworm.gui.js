@@ -1134,7 +1134,7 @@
         selections = $(drow).find('.select2-selection__choice');
         console.log(selections);
         console.log($(drow).attr('data-name'));
-        $(selections).addClass($(drow).attr('data-name'));
+        $(selections).addClass('facets.' + $(drow).attr('data-name'));
         selections.each(function(f,selec) {
           console.log(selec);
         })
