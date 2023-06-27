@@ -1131,6 +1131,8 @@
 
       $(".datarow").each(function(i,drow) {
         console.log(drow);
+        selections = $(drow).find('.select2-selection__choice');
+        console.log(selections);
       });
     };
     $(document).on("change", ".edit-box select", function(event) {
