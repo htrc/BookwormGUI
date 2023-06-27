@@ -1133,6 +1133,7 @@
         console.log(drow);
         selections = $(drow).find('.select2-selection__choice');
         console.log(selections);
+        console.log($(drow).attr('data-name'));
       });
     };
     $(document).on("change", ".edit-box select", function(event) {
