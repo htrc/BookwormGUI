@@ -320,7 +320,9 @@
 						};
 					},
 					  templateSelection: function(data) {
-						return $('<span class="selected_value" data-value="' + data.dbcode + '">' + (data.name || data.element.innerText) + '</span>');
+              var value_object = $('<span class="selected_value">' + (data.name || data.element.innerText) + '</span>');
+              $(value_object).attr('data-value',data.dbcode);
+						return $(value_object);
 					  },
 					cache: true
 				  }
