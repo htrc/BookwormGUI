@@ -1128,6 +1128,10 @@
         meta_text = (slugs.length !== 0 ? slugs.join(' <span class="query-cond text-muted">AND</span> ') : "All " + options["settings"]["itemName"] + "s");
         $(search_limit_el).find(".box_data").html(meta_text);
       });
+
+      $(".datarow").each(function(i,drow) {
+        console.log(drow);
+      });
     };
     $(document).on("change", ".edit-box select", function(event) {
       fixSlugs();
