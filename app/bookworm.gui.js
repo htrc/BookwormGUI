@@ -320,6 +320,7 @@
 						};
 					},
 					  templateSelection: function(data) {
+              console.log(data.dbcode);
               var value_object = $('<span class="selected_value">' + (data.name || data.element.innerText) + '</span>');
               $(value_object).attr('data-value',data.dbcode);
 						return $(value_object);
