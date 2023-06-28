@@ -122,12 +122,6 @@
       fixSlugs();
     };
 
-    $(".select2-hidden-accessible").select2({
-      templateSelection: function (data) {
-        return $('<span class="selection_value" data-value="' + data.dbcode + '">' + (data.name || data.element.innerText) + '</span>');
-      }
-    });
-
 
     $("#search_queries").on("click", ".box_plus", function(event) {
       var row = $(this).parents(".search-row").data("row");
@@ -203,6 +197,12 @@
       // Initialize Select2 for nicer select boxes. This is not done at newEditBox, because copied
       // rows may have options changed
       $(".edit-box").last().find("select").trigger("select2:change");
+
+      $(".select2-hidden-accessible").select2({
+      templateSelection: function (data) {
+        return $('<span class="selection_value" data-value="' + data.dbcode + '">' + (data.name || data.element.innerText) + '</span>');
+      }
+    });
       
       $("#search_queries").on("click", "#cat_box_" + rows + " a.box_data", function(event) {
         var editId, editOpen, hideEdit, inEdit;
