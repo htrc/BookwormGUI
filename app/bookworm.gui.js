@@ -124,7 +124,7 @@
 
     $(".select2-hidden-accessible").select2({
       templateSelection: function (data) {
-        return $('<span class="selection_value" data-value="' + data.dbcode + '">' + (data.name || data.element.innerText;) + '</span>')
+        return $('<span class="selection_value" data-value="' + data.dbcode + '">' + (data.name || data.element.innerText) + '</span>');
       }
     });
 
