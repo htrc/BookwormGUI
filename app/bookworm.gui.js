@@ -199,10 +199,10 @@
       $(".edit-box").last().find("select").trigger("select2:change");
 
       $(".select2-hidden-accessible").select2({
+        placeholder: 'All Texts',
         width: '100%',
         templateSelection: function (data) {
-          console.log(data)
-          return $('<span>' + (data.name || data.element.innerText) + '</span><div class="selection_value" data-value="' + data.id + '" style="display: none;"></div>');
+          return $('<span class="selection_value" data-value="' + data.id + '">' + (data.name || data.element.innerText) + '</span>');
         }
       });
       
