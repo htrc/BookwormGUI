@@ -201,7 +201,7 @@
       $(".select2-hidden-accessible").select2({
       templateSelection: function (data) {
         console.log(data)
-        return $((data.name || data.element.innerText) + '<div class="selection_value" data-value="' + data.id + '" style="display: none;"></div>');
+        return $('<span>' + (data.name || data.element.innerText) + '</span><div class="selection_value" data-value="' + data.id + '" style="display: none;"></div>');
       }
     });
       
