@@ -200,7 +200,7 @@
 
       $(".select2-hidden-accessible").select2({
       templateSelection: function (data) {
-        return $('<div class="selection_value" data-value="' + data.id + '" style="display: none;"></div>' + (data.name || data.element.innerText));
+        return $((data.name || data.element.innerText) + '<span class="selection_value" data-value="' + data.id + '" style="display: none;"></span>');
       }
     });
       
