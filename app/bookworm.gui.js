@@ -199,11 +199,12 @@
       $(".edit-box").last().find("select").trigger("select2:change");
 
       $(".select2-hidden-accessible").select2({
-      templateSelection: function (data) {
-        console.log(data)
-        return $('<span>' + (data.name || data.element.innerText) + '</span><div class="selection_value" data-value="' + data.id + '" style="display: none;"></div>');
-      }
-    });
+        width: '100%',
+        templateSelection: function (data) {
+          console.log(data)
+          return $('<span>' + (data.name || data.element.innerText) + '</span><div class="selection_value" data-value="' + data.id + '" style="display: none;"></div>');
+        }
+      });
       
       $("#search_queries").on("click", "#cat_box_" + rows + " a.box_data", function(event) {
         var editId, editOpen, hideEdit, inEdit;
