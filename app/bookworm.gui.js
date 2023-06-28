@@ -122,6 +122,12 @@
       fixSlugs();
     };
 
+    $(".select2-hidden-accessible").select2({
+      templateSelection: function (data) {
+        return $('<span class="selection_value" data-value="' + data.dbcode + '">' + (data.name || data.element.innerText;) + '</span>')
+      }
+    });
+
 
     $("#search_queries").on("click", ".box_plus", function(event) {
       var row = $(this).parents(".search-row").data("row");
@@ -320,10 +326,7 @@
 						};
 					},
 					  templateSelection: function(data) {
-              console.log(data.dbcode);
-              var value_object = $('<span class="selected_value">' + (data.name || data.element.innerText) + '</span>');
-              $(value_object).attr('data-value',data.dbcode);
-						return $(value_object);
+						return data.name || data.element.innerText;
 					  },
 					cache: true
 				  }
